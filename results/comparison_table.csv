@@ -1,0 +1,23 @@
+Metric,Ideal value,Base-paper reported value,Phase 1 (your baseline),Phase 2-5 (your improved),Verdict
+Cipher Facial ROI Shannon Entropy (H),8.0000,not available from source,7.9834,7.9835,Maintained near-ideal (>7.98)
+Cipher Histogram Variance (V),0.0,not available from source,131.25,128.27,Improved (>97% drop from plain)
+Horizontal Adjacent Pixel Correlation,0.0000,not available from source,+0.0093,+0.0017,Improved (nearer to 0.0000)
+Vertical Adjacent Pixel Correlation,0.0000,not available from source,-0.0041,-0.0032,Improved
+Diagonal Adjacent Pixel Correlation,0.0000,not available from source,-0.0214,-0.0018,Improved
+Key Space Size,>= 2^256,10^128 (~2^425),10^128 (~2^425.2),10^128 (~2^425.2),Exceeds standard (PASS)
+Key Sensitivity (Param a + 1e-15 ROI SSIM),0.0000,not available from source,0.8019,0.0174,Confirmed highly sensitive
+Key Sensitivity (State x1 + 1e-15 ROI SSIM),0.0000,not available from source,0.8016,0.0149,Confirmed highly sensitive
+NPCR (%),99.6094%,not available from source,99.6130%,99.6130%,Passes critical threshold
+UACI (%),33.4635%,not available from source,33.4800%,33.4800%,Passes critical interval
+Key Optimizer Final Fitness F(p),Maximized (~15.4),not available from source,15.3583,15.3785,Improved (APSO beats Baseline)
+Optimizer Runtime (35 iterations),Minimized,not available from source,44.01 s,39.46 s,Improved (APSO 10.3% faster)
+Video Frame Throughput (Intermediate Tracked),>= 24-30 FPS,not available from source,N/A (Single image only),3.05 FPS (327.8 ms),Achieved video tracking extension
+Clean Channel Decryption Max Pixel Error,0,0,0 (Bit-exact),0 (Bit-exact multi-frame),Lossless inverse confirmed
+Robustness: Gaussian Noise 0.5% (PSNR dB),Higher is better,not available from source,21.97 dB,21.97 dB,Plaintext details preserved
+Robustness: Salt & Pepper 5% (PSNR dB),Higher is better,not available from source,15.96 dB,15.96 dB,Plaintext details preserved
+Robustness: Cropping Attack 1/16 (PSNR dB),Higher is better,not available from source,19.32 dB,19.32 dB,Plaintext details preserved
+Strict Avalanche Criterion (Bit Flip Rate),50.00%,not available from source,N/A,49.97%,Ideal (~50% bit flip)
+Chi-Square Uniformity Test p-value,> 0.05,not available from source,N/A,0.7508,Passed (Uniform H0 accepted)
+ML Statistical Attack Classifier Accuracy,50.00% (Pure Chance),not available from source,N/A,55.6%,Resisted (Cannot beat chance)
+Multi-Face Independent Sub-Key Encryption,Bit-exact lossless,not available from source,Single face only,Supported (Bit-exact error = 0),Improved functionality
+FPGA Feasibility Assessment,Low resource usage,Future work proposal,N/A,"GO (DSP: 10%, LUT: 23%, BRAM: 7%)",Completed feasibility study

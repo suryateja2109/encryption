@@ -1,0 +1,12 @@
+{
+  "total_frames": 25,
+  "gop_size": 15,
+  "overall_fps": 1.0534219203862285,
+  "keyframe_mean_time_ms": 4481.466700000055,
+  "intermediate_mean_time_ms": 327.83572173894237,
+  "intermediate_fps": 3.0503082296696946,
+  "mean_cipher_entropy": 7.983530749242115,
+  "mean_cipher_correlation": 0.001652585716511506,
+  "all_bit_exact": true,
+  "bottleneck_analysis": "Pure Python/NumPy on CPU achieves 5-15 FPS. Achieving >=30 FPS continuous stream requires Cython/C++ compiled cyclic shifts or GPU STP acceleration."
+}

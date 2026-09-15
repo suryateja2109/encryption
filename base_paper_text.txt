@@ -1,0 +1,1350 @@
+6522
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+Deepface-Based Chaotic Image Encryption Using
+Key Optimization and Semi-Tensor Product Theory
+Dawei Ding , Member, IEEE, Dong Xie , Hongwei Zhang , Zongli Yang, and Chu’an Liu
+
+Abstract— Currently, protecting personal privacy through
+selective encryption of facial images has become a research
+hotspot. This paper aims to design a new image encryption
+scheme using chaotic systems, optimization algorithms, and the
+Semi-Tensor Product (STP) theory. Firstly, we proposed a 3D
+Coupled Ikeda Map with Bounded Amplitude (3D-CIMBA),
+which has controllable Lyapunov exponents and high-complexity.
+Secondly, Particle Swarm Optimization (PSO) algorithm is used
+to generate control keys of the chaotic system, and produce
+chaotic sequences. Then, DeepFace model is applied to recognize facial regions for encryption. Moreover, the face image is
+encrypted by performing row-column alternation cyclic shifting
+operation and STP diffusion. Finally, cryptographic analysis
+is conducted using histograms, pixel correlation, information
+entropy, and SSIM. The simulation results show that this scheme
+demonstrates robustness against differential attacks and noise
+attacks, which also exhibits fast encryption speed and large
+key space. These results show that the proposed algorithm
+can encrypt facial information more efficiently and securely
+compared to traditional algorithms.
+Index Terms— Chaotic system, image encryption, PSO optimization, DeepFace, STP theory.
+
+I. I NTRODUCTION
+
+W
+
+ITH the continuous advancement of computer technology and artificial intelligence, the information content
+in the Internet has experienced explosive growth in the past
+decade. Massive data, including images, videos, documents,
+and chat records, need to be transmitted through public
+channels, making personal privacy leakage a major challenge
+faced by everyone [1]. Therefore, secure communication has
+become a hot research topic in modern society [2]. Digital
+image, characterized by high redundancy, big data capacity,
+and strong correlation between information [3], [4], imposes
+more stringent requirements on encryption schemes. Many
+scholars are dedicated to finding encryption schemes which are
+more efficient and less vulnerable to attacks than traditional
+solutions [5]. Lots of techniques, such as DNA encoding [6],
+[7], compressive sensing [8], [9], [10] and information hiding [11], [12], [13], have been developed and are widely
+combined with image encryption.
+Received 11 October 2024; revised 24 December 2024; accepted 2 February
+2025. Date of publication 19 February 2025; date of current version
+4 July 2025. This article was recommended by Associate Editor W. Wang.
+(Corresponding author: Hongwei Zhang.)
+The authors are with the School of Electronic Information Engineering, Anhui University, Hefei 230601, China (e-mail: dwding@ahu.
+edu.cn; 695885681@qq.com; hwzhang@ahu.edu.cn; 07115@ahu.edu.cn;
+166118780@qq.com).
+Digital Object Identifier 10.1109/TCSVT.2025.3543824
+
+Since the concept of chaos was first proposed in 1963,
+chaos theory has developed rapidly, gradually evolving into
+a mature and practical theoretical framework [14]. Chaos
+systems exhibit unpredictability and sensitivity to initial conditions [15], which means that the long-term iterative results
+of chaotic systems are unpredictable, and small changes in
+the initial state can lead to drastic changes in their dynamic
+behavior [16], [17]. These characteristics makes these systems
+widely used in the field of secure communication, especially
+in image encryption. According to the definition of chaotic
+system, it can be divided into two types: discrete systems and
+continuous systems. Continuous systems, such as the Chen
+system and Lorenz system, take longer for iterative solving,
+whereas discrete systems have an advantage in terms of
+computational cost. In recent years, many encryption schemes
+based on discrete chaotic systems have been proposed [18].
+Zhu et al. [19] proposed a 2D Logistic-modulated-SineCoupling-Logistic chaotic map (2D-LSMCL) to generate
+chaotic matrices in image encryption. Qiu et al. [20] used
+a hyperchaotic map 2D-CSCM to design an encryption
+algorithm based on Rubik’s Cube scrambling. Kocak et al.
+[21] proposed a new PSO key optimization algorithm based
+on the Modular Integrated Logistic Exponential (MILE) map.
+However, many existing chaotic image encryption schemes
+have some short-comings [22]. For example, some of the
+chaotic systems are insufficient in chaotic properties, having
+simple structures and small range of system parameters, which
+may lead to chaos degradation [23]. Ding et al. [24] introduced
+the concept of controllable Lyapunov exponents, and by using
+a modulo function, they ensured that the system parameters
+exhibit chaotic behavior over a wide range. In addition, traditional encryption methods consist of two steps: scrambling
+and diffusion [25]. The XOR pixel diffusion scheme is widely
+used, making it susceptible to targeted attacks. Therefore,
+many researchers are seeking new pixel confusion schemes
+that differ from traditional methods, such as STP diffusion.
+Gao et al. [26] used STP theory and a new map called
+2D-LAIC to encrypt the 3D model. Gao et al. [27] used
+Histogram of Oriented Gradients (HOG) to detect human face
+and introduced STP diffusion in facial area encryption.
+Most conventional encryption schemes with good results
+have high time complexity. The Region of Interest (ROI)
+encryption compensates for the shortcomings of the aforementioned time cost [28]. Shen et al. [29] proposed an optical
+selective encryption scheme which was adapted in the ROI of
+medical image. Jamel et al. [30] introduced ROI encryption
+
+1051-8215 © 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artificial intelligence
+and similar technologies. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+methods into medical image area, which aimed to reduce the
+data size of telemedicine.
+Facial images carry unique biometric information, making
+facial encryption an important area in ROI (Region of Interest)
+encryption. In applications such as face recognition and face
+unlocking, facial images often contain significant redundancies. Honsny et al. [31] used YOLOv3 to detect human face in
+video and applied fast block scrambling technique to encrypt
+it. Du et al. [32] proposed a new chaotic system called NCMLP
+and applied it in a novel multiple face image encryption
+scheme. The aforementioned facial encryption schemes show
+improvements in encryption time overhead compared to traditional methods. However, there is still room for improvement
+in the models and accuracy of facial detection and recognition.
+Based on above analysis, a novel selective color image
+encryption scheme is proposed, which utilizes techniques
+such as DeepFace model, STP diffusion, and PSO secret key
+optimization. In summary main contributions of this paper are
+listed as follows:
+1) A novel 3-dimensional chaotic map 3D-CIMBA is introduced, with controllable Lyapunov exponents, which has a
+wide chaos range and high complexity.
+2) A face recognition encryption scheme based on the
+DeepFace model is employed, in order to effectively enhance
+encryption speed.
+3) The PSO optimization algorithm is utilized for generating
+initial values and control parameters in the system. That
+produces keys associated with the image to be encrypted,
+which also makes the encryption scheme effective in resisting
+known plaintext attacks.
+4) STP, as a novel scheme for pixel confusion in images,
+differs significantly from conventional XOR-based confusion methods, making it effective against conventional attack
+methods.
+The rest of the paper is organized as follows:
+Section II discusses the relevant technologies used in the
+encryption scheme of this paper. The proposed chaotic system
+and its dynamic behavior analysis are introduced in Section III.
+An image encryption and decryption scheme based on the
+aforementioned theories is presented in section IV. Section V
+conducts a cryptographic analysis of encryption and decryption. The last part provides a summary of this paper.
+II. P REPARATION
+A. DeepFace
+DeepFace is a cutting-edge neural network architecture
+developed by Facebook AI Research (FAIR) for facial recognition tasks [33]. In application, DeepFace has demonstrated
+remarkable performance, achieving an accuracy rate of 97.35%
+on the standard Labeled Faces in the Wild (LFW) benchmark [34]. This level of accuracy is comparable to, and in
+some cases exceeds, human performance, marking a significant
+milestone in the quest for reliable automated facial recognition
+technology [35].
+Utilizing the DeepFace neural network model, we can
+easily perform facial region recognition and comparative
+analysis. Its functionalities include but are not limited to
+
+6523
+
+identifying gender, race, age, facial expressions, and other
+features of individuals. It also offers face comparison capabilities and provides a confidence score for the comparison
+results for reference. With this, we can establish our own
+facial database and selectively encrypt the faces of selected
+individuals.
+B. PSO Algorithm
+Particle Swarm Optimization (PSO) is a population-based
+metaheuristic algorithm that mimics the social behavior of bird
+flocking.
+The basic idea of the PSO algorithm is to randomly initialize
+a swarm of particles in the search space, with each particle
+representing a point in the search space. Each particle has
+two attributes: position and velocity. The position represents a
+potential solution, while the velocity determines the particle’s
+movement direction and distance [36]. The particles update
+their positions by tracking two ‘best’ solutions: one is the
+best position the particle has experienced (individual best
+solution, pbest), and the other is the best position experienced
+by the entire swarm (global best solution, gbest). During the
+execution of the algorithm, all particles in each generation
+update their velocities and positions according to the following
+formula [37]:
+(
+vit+1 = wvit + c1r1 ( pbesti − xit ) + c2r2 (gbest − xit )
+xit+1 = xit + vit+1 ,
+(1)
+here, vit and xit represent the velocity and position of the ith
+particle at iteration t, respectively. w is the inertia weight,
+controlling the preservation of particle velocity; c1 and c2 are
+learning factors determining the degree to which particles are
+attracted towards their personal and the global best positions;
+r1 and r2 are random numbers within [0,1], introduced to add
+stochasticity to the search.
+C. STP
+There are two matrixes P ∈ Mm×n , Q ∈ M p×q . If the
+least common multiple of n and p is t. T is defined as the
+semi-tensor product of the two:
+T = P ∝ Q = (P ⊗ It/n )(Q ⊗ It/ p ),
+
+(2)
+
+where M represents the set of all m × n-sized matrices, ∝
+denotes the semi-tensor product, ⊗ denotes the tensor product
+of matrices, and I represents the identity matrix.
+
+
+10 21
+Example 1: There are two matrices, P =  2 1 0 0 , and
+01 11
+
+
+1 21
+Q=
+.
+0 12
+T = P ∝ Q = (P ⊗ I4/4 )(Q ⊗ I4/2 ) = (P ⊗ I1 ) · (Q ⊗ I2 )
+
+
+
+ 
+
+10 21
+1 21
+10
+
+
+= 2 1 0 0 ·(
+⊗
+)
+01
+0 12
+01 11
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6524
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+
+102 010
+10 21
+0 1 0 2 0 1 
+
+= 2 1 0 0  · 
+0 0 1 0 2 0 
+01 11
+000 102
+
+
+10 4152
+= 2 1 4 2 2 1 .
+01 1323
+
+
+
+
+
+
+(3)
+
+Reversely, when given matrices T and P, Q can be calculated by
+−1
+ 
+
+10 21
+10 4152
+Q ⊗ I2 = T · P −1 =  2 1 4 2 2 1  ·  2 1 0 0 
+01 11
+01 1323
+
+
+102 010
+
+
+0 1 0 2 0 1 
+I 2I I
+
+
+.
+(4)
+=
+=
+0 I 2I
+001 020
+000 102
+Then, we can easily restore Q from the equation. It is worth
+noting that since P is not a square matrix, the operation
+P −1 corresponds to finding its generalized inverse matrix.
+In practice, in our encryption steps, we usually use the doubled
+dimension semi-tensor product to simplify our calculations.
+That is, n is an integer multiple of p.
+III. P ROPOSED C HAOTIC M AP
+In this section, a new type of maps based on Ikeda is introduced. We extensively investigated the dynamical behavior
+of this system under various system parameter ranges and
+compared its performance with other mappings.
+A. Ikeda Map and Proposed Map
+The Ikeda map is a two-dimensional discrete chaotic system
+originally proposed by Kunihiko Ikeda in 1979 to model the
+complex dynamics of light transmission through a nonlinear optical medium. It is defined by the following complex
+mapping:
+Un+1 = a + bUn e
+
+i(δ−
+
+K
+)
+1+|Un |2
+
+.
+
+(5)
+
+In its more common real form, the Ikeda map can be
+expressed by (6).
+
+K
+
+
+ φn = δ − 1 + x 2 + y 2 ,
+n
+n
+(6)
+x
+=
+a
++
+b(x
+cos(φ
+
+n+1
+n
+n ) − yn sin(φn ))),
+
+
+yn+1 = b(xn sin(φn ) − yn cos(φn )),
+where a, b, δ, K are system parameters, the map exhibits
+chaotic behavior when b > 0.6 and x1 , y1 ∈ (0, 1) [23].
+However, the chaotic system exhibits characteristics of having
+a small chaotic range of parameters and poor performance in
+dynamical behavior.
+The small chaotic range and Lyapunov exponent of
+the Ikeda map pose a risk that the chaotic sequences
+it generates through iterations may be cracked. Therefore,
+an improved 3-dimensional coupled Ikeda map with bounded
+amplitude(3D-CIMBA) is proposed. By introducing a third
+dimension through modifications to the mathematical expression and adding a linear term e g xn to the original equation.
+
+So that, by using a clipping function to restrict the function’s
+value between 0 and 1, we obtained the final system equation.
+It effectively enhances the system’s chaotic characteristics and
+the chaotic range, making it more unpredictable. The system
+formula of 3D-CIMBA is given as (7) and (8).
+K
+,
+(7)
+φn = δ −
+2
+1 + xn + yn2 + z n2
+
+g
+
+ xn+1 = mod(a + b(xn cos(φn ) − yn sin(φn )) + e xn , 1),
+g
+yn+1 = mod(b(xn sin(φn ) − yn cos(φn )) + e yn , 1),
+
+
+z n+1 = mod(b(xn sin(φn ) − yn sin(φn )) + e g z n , 1),
+(8)
+where ϕ is an Intermediate variable while xn , yn and z n
+represents the result of the nth iteration of three different
+chaotic sequences. a, b,δ, K, g are five control parameters
+of 3D-CIMBA, mod(. . . ,1) represents the modulo operation.
+Through the improved system, we can generate the pseudorandom sequences required for encryption through multiple
+iterations.
+B. Controllable Lyapunov Exponent
+Assuming there is an autonomous system ddtx = F(x),
+we have the following linear differential equation:
+
+d1x(t)
+
+
+= J1x(t)
+dt
+(9)
+1
+
+ L E i = lim ln λi (J),
+t→∞ t
+where J is the Jacobian matrix of the system, i = 1,2,3,. . .
+[38].
+Lyapunov exponent (LE) is an important index to evaluate
+the chaotic behavior of system motion. A positive LE can be
+a reference of judgment that a dynamical system is chaotic,
+which indicates that the trajectory of the system diverges over
+time [39]. For multidimensional systems, multiple positive
+LE indicate that their trajectories diverge in multidimensional
+space as well.
+We can represent the Jacobian matrix of 3D-CIMBA using
+the following formula:
+
+
+j + eg
+j12
+j13
+∂F  11
+j21
+j22 + e g
+j23 
+J=
+=
+(10)
+∂x
+j31
+j32
+j33 + e g
+Take j11 as an example,
+j11
+≤ |b|(|cosφn | + |
+
+2K xn (xn sinφn + yn cosφn )
+|) ≤ |b||1 + 4K |
+(1 + xn2 + yn2 + z n2 )
+(11)
+
+Similarly, it can be proved that jmn (m = 1, 2, 3; n = 1, 2, 3)
+are all less than or equal to |b||1+4K |. So that, when the
+parameters satisfy that |b||1+4K | ≪ e g ,We can approximate
+that jmn /e g = 0. And the Jacobian matrix J can be rewrite as
+ j11
+ 
+
+j12
+j13
+eg 0 0
+eg + 1
+eg
+eg
+
+
+j22
+j23
+J = e g  ej21g
+ =  0 e g 0  (12)
+eg + 1
+eg
+j31
+j32
+j33
+0 0 eg
++1
+eg
+
+eg
+
+eg
+
+Obviously, J has three positive identical eigenvalues e g .
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+6525
+
+Fig. 1. LEs of 3D-CIMBA’s 5 parameters. (a) parameter g; (b) parameter
+a; (c) parameter b; (d) parameter δ.
+
+Therefore, J has three identical eigenvalues. Thus, based
+on the LE calculation formula, the LE of 3D-CIMBA equal
+to g. Within the above value ranges, 3D-CIMBA consistently
+exhibits hyperchaotic behavior [40].
+Next, the proposition above is verified through simulations.
+We set the initial value (x1 , y1 , z 1 ) = (0.1, 0.2, 0.3), and
+the parameters (a, b, δ, K ) = (10, 10, 0.4, 6). By adjusting
+the value of g, we can control the overall level of the LE of the
+system. As shown in Fig. 1(a), as the value of g increases, the
+Lyapunov Exponent spectrum (LEs) of the three sequences
+tend to be consistent and numerically almost equal to g. With
+g fixed at 10 and other values unchanged, the curves of LE
+of the parameters a, b,δ are shown in Fig. 1(b-d). Any of
+these parameters do not significantly affect the LEs. The above
+analysis indicates that for different encryption schemes, we can
+flexibly select the corresponding system parameters, especially
+g, to adjust the complexity of the system.
+C. Bifurcation Diagram
+A bifurcation diagram is a visual representation used in
+the study of dynamical systems, including chaotic systems,
+to illustrate how the behavior of the system changes as a
+parameter within the system is varied. These diagrams show
+how a system transitions from simple, predictable behavior to
+complex, chaotic dynamics through a series of bifurcations.
+A bifurcation occurs when a small change in the parameter
+value causes a sudden qualitative change in the behavior of
+the system. Fig. 2(a)-(b) demonstrates the bifurcation diagram of classic Ikeda map’s 2 different parameters, while
+Fig. 2(c)-(d) shows that of 3D-CIMBA. Similarly, we compared other classic three-dimensional mapping models, such
+as VL-DMSIN [40]. We plotted the bifurcation diagrams for
+parameters b0 and b2 separately, as shown in Fig. 2(e)-(h).
+It can be observed from the figures that the proposed system
+has a much bigger chaotic parameters range than the Ikeda
+map.
+
+Fig. 2. Bifurcation diagram. (a)-(b) parameter a and b from Ikeda map;
+(c)-(d) parameter a and b from 3D-CIMBA; (e)-(i) parameter b0 and b2 from
+VL-DMSIN.
+
+Fig. 3. Trajectory diagram of 3D-CIMBA. (a) 3D graph; (b) x-y plane
+projection diagram.
+
+diagram graphically displays the path of system states over
+time, providing an intuitive perspective for understanding the
+system’s long-term behavior. If the system exhibits closed-loop
+trajectories, this usually indicates periodic behavior. We set
+the system iteration count at 50,000, discarding the first
+1,000 points. Fig. 3 shows the three-dimensional phase space
+distribution of the 3D-CIMBA system and its projection on the
+x-y planes. The overall distribution of the system’s iteration
+results in the phase space is uniform, which indirectly confirms
+the system’s chaotic nature.
+E. Sample Entropy
+From the previous analysis, it has been proved that when
+the parameter g fixed, the changes in b and k have the
+greatest impact on the system. Fig. 4(a) shows the results
+of the Sample Entropy (SE) as the parameters vary. Sample
+Entropy (SampEn) is an improved version of Approximate
+Entropy (ApEn) and is a statistical measure used to assess
+the complexity of time series data. It primarily evaluates the
+irregularity and complexity of time series. Fig. 4(b-f) shows
+the comparison of SE values between 3D-CIMBA and other
+systems.
+
+D. Trajectory Diagram
+
+IV. I MAGE E NCRYPTION AND D ECRYPTION A LGORITHM
+
+The trajectory diagram of a chaotic system is a critical tool
+for describing the dynamic behavior of the system. A phase
+
+The overall encryption process is illustrated in Fig. 5,
+which can be divided into three main steps. Additionally,
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6526
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+Algorithm 1 Secret Keys Optimization
+
+Fig. 4. SE of different chaotic system. (a) 3D-CIMBA; (b) 2-D cubic map;
+(c) MILE; (d) 2D-LTMM; (e) 2D-LSMCL; (f) 2D-CSCM.
+TABLE I
+D IFFERENCE B ETWEEN D IFFERENT A LGORITHM
+
+Input: Image img, Population number N num, Dimension dim,
+Iterations iter
+1.
+Initialize position limits x_limit and velocity limits v_limit
+2.
+For each dimension i up to dim:
+3.
+Initialize position x randomly within x_limit
+4.
+Initialize velocity v randomly within v_limit
+5.
+Initialize p_best as x
+6.
+Initialize f _best as zeros
+7.
+Initialize f p_best(individual’s historical best fitness) as negative infinity
+8.
+Initialize f g_best(global best fitness) as negative infinity
+9.
+Initialize w = 0.8, c1 = 0.5, c2 = 0.5
+10.
+Initialize a recorder record to zero
+11.
+Iteration starts:
+12.
+For i = 1 : iter :
+13.
+Calculate current fitness F( p) by (13)
+14.
+For j = 1 : N num
+15.
+If f p_best ( j) < F( j):
+16.
+Update f p_best ( j) and position
+17.
+If f g_best ( j) < max( f p_best):
+18.
+Update f g_best ( j) and position
+19.
+Update v by Eq.(1), adjust v within v_limit
+20.
+Update x by Eq.(1), adjust x within x_limit
+21.
+Record the global best fitness to recorder
+22.
+Calculate the average position for all dimensions
+Output: p_best (secret keys)
+
+calculating information entropy is shown in (15)
+in Table I, we compare the similarities and differences between
+the encryption algorithm used in this paper and some existing
+algorithms.
+A. Key Optimization Based on PSO Algorithm
+First, 100 particles are randomly initialized for optimization
+search, where the coordinates of each particle represent the
+initial parameters of 3D-CIMBA. Then chaotic sequences are
+generated to encrypt a portion of size 64∗64 which is randomly
+cropped from the input image. Therefore, we can calculate the
+fitness function for PSO by (13)
+F( p) = ω1
+
+3
+X
+
+P S N R(Pi ) + ω2 (8 − H (P))
+
+(13)
+
+i=1
+
+where P S N R(Pi ) means Peak Signal-to-Noise Ratio of the
+64∗ 64-pixel block’s RGB channels and H (P) is the information entropy of that. ω1 and ω2 are two weight coefficients of
+it. PSNR is a commonly used metric to evaluate the quality of
+reconstructed or compressed images or videos. It measures the
+ratio between the maximum possible power of a signal (the
+“peak signal”) and the power of corrupting noise that affects
+the fidelity of the signal (the “noise”). PSNR is expressed in
+decibels (dB) and is calculated using the mean squared error
+(MSE) between the original and the reconstructed images [41].
+
+1 Xn
+
+ MSE =
+(xi − xi )2
+i=1
+n
+(14)
+2
+
+ P S N R = 10 · log ( 255 ),
+10
+MSE
+Here, xi represents the ith pixel of the image, and xi represents the average pixel value of the image. The formula for
+
+H (x) =
+
+256
+X
+i=1
+
+p(xi ) log2
+
+1
+p(xi )
+
+(15)
+
+For a randomly distributed irregular image, its theoretical
+entropy value is 8. In practical encryption, the closer the
+entropy of the encrypted image is to 8, the better the encryption effect.
+Algorithm 1 provides pseudo-code for the specific PSO
+optimization process of the key. The meanings of various
+parameters have been given in the previous text and are not
+repeated here.
+B. Face Recognition and Database Matching
+Our facial test set comes from the Internet Movie Database
+(IMDB) [27]. Due to the large overall volume of the files,
+3,000 images from IMDB.0 is used, with a total size of 1.3GB,
+to construct the facial database. Additionally, 5 images not in
+the database is selected for recognition testing, with the test
+results presented in Section VI.
+In DeepFace model, whether two images belong to the same
+person is determined by comparing the Euclidean distance
+between them and a preset threshold.
+If the distance between two facial feature vectors is less than
+this threshold, two images show the same person; otherwise,
+they are different ones. This threshold is usually determined by
+conducting experiments on a certain dataset and based on the
+accuracy and recall rate of face verification. Different datasets
+and application scenarios may require different threshold settings. In our simulation we set threshold of Euclidean distance
+at 0.5. If the comparison is successful, the image would be
+encrypted.
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+Fig. 5.
+
+6527
+
+Flow chart of proposed encryption method.
+
+C. Encryption Scheme
+Step1: Read the original image P, and extract the face image
+F of size m × n ×3 based on the previous face recognition
+results. Then we reshape F into the size of m ×3n.
+Step2: Utilizing the algorithm mentioned in Section V-A,
+search for the optimal key of 3D-CIMBA for the plaintext
+image. Here, considering the computational cost of multiple
+optimization rounds and the marginal effect of the optimization
+algorithm on improving the chaotic performance, we set the
+dimension of the particle swarm dim = 8 (corresponding to
+5 parameters and 3 initial values), the population size Nnum =
+100, the number of iterations iter = 100, the coefficient of the
+fitness function ω1 = 0.3, ω2 = 0.7.
+Step3: Based on the aforementioned keys, generate the corresponding three chaotic sequences x, y, z. The first 500 states
+of the sequence were discarded and obtain line, row and val
+using the operations in (16).
+
+5
+
+ linei = f loor (mod(xi ∗ 10 , 3n))
+(16)
+r owi = f loor (mod(yi ∗ 105 , m))
+
+
+vali = 2z i .
+Step4: Perform row-column alternation cyclic shifting operation on the face image using sequences line and row,
+as depicted in the algorithm 2. In the following encryption,
+we set the number of Iterations as 6000.
+Step5: Firstly, the first n 2 elements of sequence val is
+rearranged to form a square matrix Rn×n . Then, we calculate
+the semi-tensor product of Rn×n and F2 , denoted as F3 .
+ci pher = mod(F2 ∝ R, 28 ),
+
+(17)
+
+During the decryption process, we need to compute the inverse
+matrix of Rn×n , hence it is essential to ensure that matrix is
+invertible. If the first generated Rn×n is not invertible, then
+one should start taking values from the 101st element of val
+to regenerate it. If it is still not invertible, continue to take
+
+Algorithm 2
+Input: face image F, Number of Iterations roundnum
+Output: cipher face image C1
+1. For i = 1 : r oundnum
+2.
+Row Index i x = mod(i, m)
+3.
+Column Index i y = mod(i, n ∗ 3)
+4.
+F2(ix+1,:) = circshift(F1(ix+1,:),line(i));
+5.
+F2(:,iy+1) = circshift(F1(:,iy+1),row(i));
+6. C1 = reshape(F2,size(F))
+
+values from every subsequent 100 elements until an invertible
+full-rank matrix is produced. At this point, we have obtained
+the final encrypted result, cipher.
+Furthermore, as the semi-tensor product operation involves
+a mod function, constituting an asymmetric encryption,
+we also need to calculate the private key keys required for
+decryption [27].
+keys = f loor (F2 ∝ R/28 )
+
+(18)
+
+Since the encryption scheme we proposed is a type of symmetric encryption, the decryption process essentially involves
+operations that are the reverse of the encryption process.
+V. C RYPTANALYSIS OF P ROPOSED S CHEME
+In this Section, simulation tests would be conducted on
+the proposed recognition encryption system. The hardware
+configuration used is as follows: the CPU is an Intel Core
+I5 13600KF, with memory being DDR4 4000 16GB∗2. The
+simulation software includes Spyder IDE 5.4.3 (Python 3.11)
+and MATLAB R2022a.
+A. Simulation Results
+We firstly tested the facial database comparison feature,
+using the following five images (rm342264064_1964-9-2_
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6528
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+TABLE II
+FACE R ECOGNITION AND M ATCHING R ESULTS
+
+Fig. 6. Encrypted and decrypted results of facial image. (a) plain image,
+(b) cipher image, (c) decrypted results.
+
+2009.jpg, rm304650752_1955-5-16_2001.jpg, rm338860544_1961-7-30_1999.jpg,
+rm3794573056_1985-7-18_2007.
+jpg, rm848858368_1978-9-23_2010.jpg) as input. For
+convenience, these will be abbreviated as ‘image 1 to 5’.
+Four of them were successfully matched to the image in
+the database with the smallest Euclidean distance, while one
+failed, as shown in the Table II.
+Furthermore, we performed encryption and decryption operations on the facial parts of these five images that passed the
+test. The results are shown in the is the original image with
+a successfully matched facial area, which is encrypted using
+the process mentioned in Section IV to produce Fig. 6.
+In addition, to facilitate comparison with other encryption
+schemes not using images from the IMDB dataset, we also
+performed both global and facial area-specific encryption on
+some commonly used images in the standard image test set
+(baboon, peppers, 4.1.01 and 4.1.04). To verify the proposed
+scheme’s ability to resist plaintext attacks, we selected two
+512 × 512 ×3 all-black and all-white images to test the
+encryption effect. The encrypted results show no significant
+difference compared to other colored images. The images used
+and the results of encryption are shown in the Fig. 7.
+
+Fig. 7.
+Encryption and decryption of (a)-(b) baboon, (c)-(d) peppers,
+(e)-(f)4.1.01, (g)-(h)4.1.04, (i)-(j) all-white image, (k)-(l) all-black image.
+
+The formula for calculating information entropy has been
+provided earlier, and the information entropy calculated
+according to (15) is presented in Table III.
+C. Correlation Analysis
+
+B. Histogram and Entropy Analysis
+The histogram is a graphical representation of the distribution of pixel values in an image. Typically, the pixel values
+in the original image exhibit a non-uniform distribution [42].
+Fig. 8 displays the histogram distributions of the three RGB
+channels of the image before and after global encryption. From
+the figure, it can be observed that the pixel value distribution
+of the encrypted face image tends to be uniform, which does
+not intuitively reveal useful information.
+
+In the application of image encryption, the ideal encryption
+algorithm should minimize the correlation between adjacent
+pixels in the image to the greatest extent, making the encrypted
+image appear as similar to random noise as possible, thereby
+enhancing the security of the image. Mathematically, the
+correlation between adjacent pixels can be quantified by
+calculating the correlation coefficient between pixel values.
+For a given image, one may choose horizontally adjacent,
+vertically adjacent, or diagonally adjacent pixel pairs for this
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+6529
+
+Fig. 9. Correlation diagram of:(a), (b), (c)4.1.01 and (d), (e), (f)4.1.04 from
+three channels.
+
+Fig. 8. Histogram of face images:(a), (c), (e), (g) plain image;(b), (d), (f),
+(h) cipher image.
+TABLE III
+E NTROPY OF T ESTED I MAGES
+
+Fig. 10. Key sensitivity. (a)result of chaotic sequence when keys change;
+(b) decrypted result when a change; (c) decrypted result when x1 change.
+
+calculation [42]. The formula of correlation coefficient ρ is:
+ρ=
+
+E[(X − µ X )(Y − µY )]
+.
+σx σ y
+
+(19)
+
+We calculated the plain image (baboon and pepper) as well
+as the corresponding cipher ones. The results are shown in
+Fig. 9, The correlation data for all images and comparison,
+including the aforementioned facial images, are recorded in
+Table IV and Table V.
+D. Key Space and Sensitivity
+In this paper, a total of five parameters are used, all set
+within the range of [0,10]. Three initial values are set within
+[0,1], and the type of variables is uniformly double. The
+system’s key space can be calculated as (1016 )5 × (1016 )3 =
+10128 , which is larger than 2425 . Research indicates that
+cryptographic system must have a key space larger than
+
+2256 to ensure it cannot be compromised by brute force
+attacks [44], and clearly, the encryption scheme in this paper
+meets this criterion. Additionally, we can further expand the
+key space by changing the parameter type from one doubleprecision floating-point to two double-precision floating-point
+numbers. Table VI shows the comparation of key space and
+entropy between different algorithm. Furthermore, since the
+PSO algorithm uses randomly selected plaintext images to
+generate keys, different plaintext images will produce different
+keys. Therefore, the encryption scheme in this paper can also
+effectively resist chosen-plaintext attacks.
+A good cryptographic system should also be highly sensitive
+to key values [50]. Taking an image as an example, based on
+previous encryption and decryption results, we attempted to
+add an offset of 10−15 to the correct system parameter a and
+the initial value x1 during decryption. The final decryption
+results are shown in Fig. 10.
+E. Differential Attacks
+NPCR (Number of Pixels Change Rate) and UACI (Unified
+Average Changing Intensity) are two crucial metrics used in
+differential cryptanalysis. These metrics are primarily used to
+measure the responsiveness of the encrypted image to minor
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6530
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+TABLE IV
+C ORRELATION B ETWEEN A DJACENT P IXELS OF T ESTED I MAGES
+
+TABLE V
+
+TABLE VII
+
+C OMPARATION OF M EAN C ORRELATION B ETWEEN A DJACENT P IXELS
+
+C RITICAL VALUES OF THE NPCR AND UACI
+
+TABLE VI
+C OMPARATION OF K EY S PACE AND E NTROPY
+
+The ideal values for NPCR and UACI, when only one bit
+of the image is changed, are approximately 99.6094% and
+33.4635%. The closer the calculated results are to the ideal
+value, the better. Depending on the significance level α and
+the size of the image, the critical values for NPCR and UACI
+also differ. The critical value of the NPCR can be calculated
+as (22).
+√
+L − 8−1 (α) L/mn
+−
+N PC Rα =
+,
+(22)
+L −1
+where L is the grey level, α is the significance level. Similarly,
+we can also obtain two critical values for UACI ( U AC I − and
+U AC I + ) according to (23)-(25) [52].
+(
+U AC Iα− = µu − 8−1 (α/2) × σu
+(23)
+U AC Iα+ = µu + 8−1 (α/2) × σu ,
+L +2
+µu =
+,
+(24)
+3L + 3
+(L + 2)(L 2 + 2L + 3)
+σu2 =
+.
+(25)
+18mn L(L + 1)2
+
+changes in the original image. The formulas for calculating
+NPCR and UACI are provided [51], as shown in (20) and (21).
+
+Pm Pn P3
+
+i=1
+j=1
+k=1 D(i, j, k)
+
+
+ N PC R =
+m×n×3
+(
+,
+1,
+P
+
+1 (i, j, k) = P2 (i, j, k)
+
+
+D(i,
+j,
+k)
+=
+
+0, elsewher e
+(20)
+U AC I =
+
+m X
+n X
+3
+X
+
+1
+(
+m×n×3
+
+i=1 j=1 k=1
+
+|P1 (i, j, k) − P2 (i, j, k)|
+),
+255
+
+We set α to 0.05; the critical value of different size is
+calculated in Table VII. Table VIII and Table IX show the
+NPCR and UACI results of different input and different
+algorithm. Any results within this range are considered to pass
+the test, and it can be seen that all eight subjects tested in this
+paper passed.
+
+(21)
+where (m,n) represents the dimensions of the image, P1 and
+P2 are the encryption results corresponding to plaintext images
+that differ by one bit in pixel value.
+
+F. Robustness Analysis
+Encrypted images often receive interference from channel
+noise and attackers during transmission. A system with good
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+6531
+
+TABLE VIII
+NPCR AND UACI OF T ESTED I MAGES
+
+TABLE IX
+NPCR AND UACI B ETWEEN D IFFERENT A LGORITHM
+Fig. 11. Decryption results under different attacks.(a),(c)1/16 cropping attack;
+(b),(d)1/4 cropping attack; (e)0.5% Gaussian noise; (f) 2% Gaussian noise;
+(g) 5% salt-and-pepper noise; (h) 15% salt-and-pepper noise.
+TABLE XI
+E NCRYPTION T IME OF D IFFERENT A LGORITHMS
+
+TABLE X
+S PEED T EST FOR P ROPOSED A LGORITHM
+
+G. Encryption Speed Test
+
+robustness can withstand certain levels of external attacks,
+and the encrypted images can still reveal some plaintext
+information after being decrypted.
+In this section, we introduced noise into the encrypted
+images and decrypted them. We tested the robustness of the
+encryption system using two common types of noise (salt
+and pepper noise and Gaussian noise) and cropping attacks.
+Fig. 11. displays the results of these tests, showing that the
+encryption system discussed in this paper has good robustness.
+
+We first analyzed the encryption times for various algorithms, including the one proposed in this paper, for encrypting
+color images of size 512 × 512. Each image was encrypted
+12 times, with the highest and lowest values removed and
+the average taken. The final results are shown in Table X.
+Additionally, we analyzed the time comparison for global
+encryption versus selective encryption using the algorithm
+proposed in this paper. We used images 1 to 4 as inputs,
+encrypting both the facial regions and the entire images.
+Considering the impact of different experimental platforms,
+we introduce clock cycles to compare the computational
+complexity between different algorithms [53]. The calculation
+formula is as follows:
+CC = t × Pr ocessor Clock Fr equency(H z)
+
+(26)
+
+Here, CC represents Clock Cycles, and t represents the time
+required for the algorithm to execute, in seconds. The final
+results are shown in Table XI. The clock cycles required by
+our algorithm are fewer compared to other literature.
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6532
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+TABLE XII
+S PEED T EST FOR P ROPOSED A LGORITHM
+
+and compared to other systems, they exhibited higher overall
+p-values.
+VI. C ONCLUSION
+This paper proposes a new 3D chaotic system and designs
+a new selective encryption scheme for color images. Firstly,
+we use a PSO algorithm associated with the plaintext image
+to search for the optimal key. Then, we use DeepFace to
+achieve facial region recognition and extraction. The encryption of facial images is divided into two steps: a row-column
+alternation cyclic shift of the image pixel positions and the
+STP diffusion. Images’ information entropy, histogram, correlation and SSIM show that the encrypted image exhibits
+a random distribution in space. Meanwhile, the encryption
+system exhibit resistance to different attacks. Also, our scheme
+achieves a shorter time consumption when encrypting the
+same amount of information. In future work, we plan to
+further modify the optimization algorithm to improve its
+optimization iteration efficiency, redesign the algorithm, and
+apply it to video encryption. Finally, we hope to implement
+the lightweight deployment of our overall encryption process
+and its application in secure transmission using the FPGA
+platform.
+R EFERENCES
+
+H. NIST Statistical Test
+The NIST (National Institute of Standards and Technology)
+test suite is a collection of statistical tests developed by the
+NIST to assess the randomness of digital sequences. It is primarily used to evaluate the randomness of sequences generated
+by cryptographic algorithms, random number generators, and
+similar applications.
+NIST test can confirm whether pseudo-random number
+sequences indeed possess a high level of randomness, which is
+crucial for ensuring the security of encryption algorithms [54],
+[55]. Using the default parameters, the sequence xn is iterated. 100 sets of data are randomly selected, each of length
+1 million. We conducted NIST tests on these sets, and the
+passed numbers and p-values of the final results are shown in
+Table XII. The chaotic sequences generated passed all 17 tests,
+
+[1] N.-R. Zhou, L.-L. Hu, Z.-W. Huang, M.-M. Wang, and G.-S. Luo,
+“Novel multiple color images encryption and decryption scheme based
+on a bit-level extension algorithm,” Expert Syst. Appl., vol. 238,
+Mar. 2024, Art. no. 122052.
+[2] Q. Li et al., “Concealed attack for robust watermarking based on
+generative model and perceptual loss,” IEEE Trans. Circuits Syst. Video
+Technol., vol. 32, no. 8, pp. 5695–5706, Aug. 2022.
+[3] H. Zhang, H. Hu, and W. Ding, “VSDHS-CIEA: Color image encryption
+algorithm based on novel variable-structure discrete hyperchaotic system
+and cross-plane confusion strategy,” Inf. Sci., vol. 665, Apr. 2024,
+Art. no. 120332.
+[4] Y. Xian, X. Wang, and L. Teng, “Double parameters fractal sorting
+matrix and its application in image encryption,” IEEE Trans. Circuits
+Syst. Video Technol., vol. 32, no. 6, pp. 4028–4037, Jun. 2022.
+[5] L. Teng, X. Wang, and Y. Xian, “Image encryption algorithm based
+on a 2D-CLSS hyperchaotic map using simultaneous permutation and
+diffusion,” Inf. Sci., vol. 605, pp. 71–85, Aug. 2022.
+[6] M. Kumar, A. Iqbal, and P. Kumar, “A new RGB image encryption
+algorithm based on DNA encoding and elliptic curve Diffie–Hellman
+cryptography,” Signal Process., vol. 125, pp. 187–202, Aug. 2016.
+[7] X. Kang and R. Tao, “Color image encryption using pixel scrambling
+operator and reality-preserving MPFRHT,” IEEE Trans. Circuits Syst.
+Video Technol., vol. 29, no. 7, pp. 1919–1932, Jul. 2019.
+[8] A. Ghaffari, “Image encryption-compression method via encryption
+based sparse decomposition,” Multimedia Tools Appl., vol. 83, no. 7,
+pp. 19129–19160, Jul. 2023.
+[9] Y. Li, C. Li, Y. Li, I. Moroz, and Y. Yang, “A joint image encryption
+based on a memristive rulkov neuron with controllable multistability and
+compressive sensing,” Chaos, Solitons Fractals, vol. 182, May 2024,
+Art. no. 114800.
+[10] H. Gan, X. Wang, L. He, and J. Liu, “Learned two-step iterative
+shrinkage thresholding algorithm for deep compressive sensing,” IEEE
+Trans. Circuits Syst. Video Technol., vol. 34, no. 5, pp. 3943–3956,
+May 2024.
+[11] K. Yu, L. Chen, Z. Fu, Y. Wang, and T. Lu, “A coding layer robust
+reversible watermarking algorithm for digital image in multi-antenna
+system,” Signal Process., vol. 199, Oct. 2022, Art. no. 108630.
+[12] S. Geetha, P. Punithavathi, A. M. Infanteena, and S. S. S. Sindhu, “A
+literature review on image encryption techniques,” Int. J. Inf. Secur.
+Privacy, vol. 12, no. 3, pp. 42–83, Jul. 2018.
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+DING et al.: DEEPFACE-BASED CHAOTIC IMAGE ENCRYPTION
+
+[13] M. Singh, N. Baranwal, K. N. Singh, A. K. Singh, and H. Zhou, “Deep
+learning-based biometric image feature extraction for securing medical
+images through data hiding and joint encryption–compression,” J. Inf.
+Secur. Appl., vol. 79, Dec. 2023, Art. no. 103628.
+[14] T. Gao and Z. Chen, “A new image encryption algorithm based on
+hyper-chaos,” Phys. Lett. A, vol. 372, no. 4, pp. 394–400, Jan. 2008.
+[15] Y. Dong, G. Zhao, Y. Ma, Z. Pan, and R. Wu, “A novel image
+encryption scheme based on pseudo-random coupled map lattices with
+hybrid elementary cellular automata,” Inf. Sci., vol. 593, pp. 121–154,
+May 2022.
+[16] D. Ding et al., “Controllable multistability of fractional-order memristive
+coupled chaotic map and its application in medical image encryption,”
+Eur. Phys. J. Plus, vol. 138, no. 10, p. 908, Oct. 2023.
+[17] M. Kumar, A. Saxena, and S. S. Vuppala, “A survey on chaos based
+image encryption techniques,” in Multimedia Security Using Chaotic
+Maps: Principles and Methodologies, J. Smith, Ed., New York, NY,
+USA: Springer, Feb. 2020, pp. 1–26.
+[18] D. Ding et al., “Coexisting multi-stability of Hopfield neural network
+based on coupled fractional-order locally active memristor and its
+application in image encryption,” Nonlinear Dyn., vol. 108, no. 4,
+pp. 4433–4458, 2022.
+[19] H. Zhu, Y. Zhao, and Y. Song, “2D logistic-modulated-sine-couplinglogistic chaotic map for image encryption,” IEEE Access, vol. 7,
+pp. 14081–14098, 2019.
+[20] H. Qiu, X. Xu, Z. Jiang, K. Sun, and C. Xiao, “A color image encryption
+algorithm based on hyperchaotic map and Rubik’s cube scrambling,”
+Nonlinear Dyn., vol. 110, no. 3, pp. 2869–2887, Nov. 2022.
+[21] O. Kocak, U. Erkan, A. Toktas, and S. Gao, “PSO-based image encryption scheme using modular integrated logistic exponential map,” Expert
+Syst. Appl., vol. 237, Mar. 2024, Art. no. 121452.
+[22] F. Chen, Y. Yuan, H. He, M. Tian, and H.-M. Tai, “Multi-MSB
+compression based reversible data hiding scheme in encrypted images,”
+IEEE Trans. Circuits Syst. Video Technol., vol. 31, no. 3, pp. 905–916,
+Mar. 2021.
+[23] A. Y. Darani, Y. K. Yengejeh, H. Pakmanesh, and G. Navarro,
+“Image encryption algorithm based on a new 3D chaotic system using
+cellular automata,” Chaos, Solitons Fractals, vol. 179, Feb. 2024,
+Art. no. 114396.
+[24] D. Ding et al., “An n-dimensional modulo chaotic system with expected
+Lyapunov exponents and its application in image encryption,” Chaos,
+Solitons Fractals, vol. 174, Sep. 2023, Art. no. 113841.
+[25] R. Zhou and S. Yu, “Break an enhanced plaintext-related chaotic image
+encryption algorithm,” Chaos, Solitons Fractals, vol. 181, Apr. 2024,
+Art. no. 114623.
+[26] S. Gao et al., “A 3D model encryption scheme based on a cascaded
+chaotic system,” Signal Process., vol. 202, Jan. 2023, Art. no. 108745.
+[27] S. Gao, R. Wu, X. Wang, J. Liu, Q. Li, and X. Tang, “EFR-CSTP:
+Encryption for face recognition based on the chaos and semi-tensor
+product theory,” Inf. Sci., vol. 621, pp. 766–781, Apr. 2023.
+[28] M. Lyle, P. Sarosh, and S. A. Parah, “Selective medical image encryption
+based on 3D Lorenz and logistic system,” Multimedia Tools Appl.,
+vol. 83, no. 15, pp. 45553–45574, Oct. 2023.
+[29] Y. Shen, C. Tang, M. Xu, and Z. Lei, “Optical selective encryption based
+on the FRFCM algorithm and face biometric for the medical image,”
+Opt. Laser Technol., vol. 138, Jun. 2021, Art. no. 106911.
+[30] S. S. Jamal, M. M. Hazzazi, M. F. Khan, Z. Bassfar, A. Aljaedi,
+and Z. U. Islam, “Region of interest-based medical image encryption
+technique based on chaotic S-boxes,” Expert Syst. Appl., vol. 238,
+Mar. 2024, Art. no. 122030.
+[31] K. M. Hosny, M. A. Zaki, H. M. Hamza, M. M. Fouda, and
+N. A. Lashin, “Privacy protection in surveillance videos using block
+scrambling-based encryption and DCNN-based face detection,” IEEE
+Access, vol. 10, pp. 106750–106769, 2022.
+[32] L. Du, L. Teng, H. Liu, and H. Lu, “Multiple face images encryption
+based on a new non-adjacent dynamic coupled mapping lattice,” Expert
+Syst. Appl., vol. 238, Mar. 2024, Art. no. 121728.
+[33] M. S. H. Mukta, J. Ahmad, A. Zaman, and S. Islam, “Attention and metaheuristic based general self-efficacy prediction model from multimodal
+social media dataset,” IEEE Access, vol. 12, pp. 36853–36873, 2024.
+[34] M. Wang and W. Deng, “Deep face recognition: A survey,” Neurocomputing, vol. 429, pp. 215–244, Mar. 2021.
+[35] A. Shah, B. Ali, M. Habib, J. Frnda, I. Ullah, and M. S. Anwar, “An
+ensemble face recognition mechanism based on three-way decisions,”
+J. King Saud Univ.-Comput. Inf. Sci., vol. 35, no. 4, pp. 196–208,
+Apr. 2023.
+
+6533
+
+[36] X. Wang and Y. Li, “Chaotic image encryption algorithm based on
+hybrid multi-objective particle swarm optimization and DNA sequence,”
+Opt. Lasers Eng., vol. 137, Feb. 2021, Art. no. 106393.
+[37] L. S. Khan, M. M. Hazzazi, M. Khan, and S. S. Jamal, “A novel
+image encryption based on Rossler map diffusion and particle swarm
+optimization generated highly non-linear substitution boxes,” Chin. J.
+Phys., vol. 72, pp. 558–574, Aug. 2021.
+[38] S. Gao et al., “Asynchronous updating Boolean network encryption
+algorithm,” IEEE Trans. Circuits Syst. Video Technol., vol. 33, no. 8,
+pp. 4388–4400, Aug. 2023.
+[39] T. Gopalakrishnan and S. Ramakrishnan, “Image encryption using
+hyper-chaotic map for permutation and diffusion by multiple hyperchaotic maps,” Wireless Pers. Commun., vol. 109, no. 1, pp. 437–454,
+Nov. 2019.
+[40] Z. Fan, X. Sun, J. Zhao, C. Zhang, and B. Du, “Dynamics analysis and
+feasibility verification of a 3D discrete memristive chaotic map with
+multi-vortex-like volume behavior,” Chaos, Solitons Fractals, vol. 185,
+Aug. 2024, Art. no. 115070.
+[41] G.-Q. Si, H. Cao, and Y.-B. Zhang, “A new four-dimensional hyperchaotic Lorenz system and its adaptive control,” Chin. Phys. B, vol. 20,
+no. 1, Jan. 2011, Art. no. 010509.
+[42] M. Kumar, R. N. Mohapatra, S. Agarwal, G. Sathish, and
+S. N. Raw, “A new RGB image encryption using generalized vigenéretype table over symmetric group associated with virtual planet
+domain,” Multimedia Tools Appl., vol. 78, no. 8, pp. 10227–10263,
+Apr. 2019.
+[43] D. Ding, S. Chen, H. Zhang, Z. Yang, F. Jin, and X. Liu, “Firing
+pattern transition of fractional-order memristor-coupled Hindmarsh–
+Rose neurons model and its medical image encryption for region
+of interest,” Nonlinear Dyn., vol. 112, no. 12, pp. 10529–10554,
+Jun. 2024.
+[44] J. R. de Oliveira Neto, J. B. Lima, and D. Panario, “The
+design of a novel multiple-parameter fractional number-theoretic
+transform and its application to image encryption,” IEEE Trans.
+Circuits Syst. Video Technol., vol. 30, no. 8, pp. 2489–2502,
+Aug. 2020.
+[45] D. Ding, H. Zhu, H. Zhang, Z. Yang, and D. Xie, “An n-dimensional
+polynomial modulo chaotic map with controllable range of Lyapunov
+exponents and its application in color image encryption,” Chaos, Solitons
+Fractals, vol. 185, Aug. 2024, Art. no. 115168.
+[46] L. Teng, X. Wang, F. Yang, and Y. Xian, “Color image encryption based
+on cross 2D hyperchaotic map using combined cycle shift scrambling
+and selecting diffusion,” Nonlinear Dyn., vol. 105, no. 2, pp. 1859–1876,
+2021.
+[47] X. Wang and M. Zhao, “An image encryption algorithm based on
+hyperchaotic system and DNA coding,” Opt. Laser Technol., vol. 143,
+Nov. 2021, Art. no. 107316.
+[48] L. Li, “A novel chaotic map application in image encryption algorithm,”
+Expert Syst. Appl., vol. 252, Oct. 2024, Art. no. 124316.
+[49] M. Gong, X. Chai, Y. Lu, and Y. Zhang, “Exploiting fourdimensional chaotic systems with dissipation and optimized logical
+operations for secure image compression and encryption,” IEEE
+Trans. Circuits Syst. Video Technol., vol. 34, no. 8, pp. 7628–7642,
+Aug. 2024.
+[50] M. Kumar, P. Powduri, and A. Reddy, “An RGB image encryption using
+diffusion process associated with chaotic map,” J. Inf. Secur. Appl.,
+vol. 21, pp. 20–30, Apr. 2015.
+[51] P. Liu, X. Wang, and Y. Su, “Image encryption via complementary
+embedding algorithm and new spatiotemporal chaotic system,” IEEE
+Trans. Circuits Syst. Video Technol., vol. 33, no. 5, pp. 2506–2519,
+May 2023.
+[52] Y. Zhang, “A new unified image encryption algorithm based on a
+lifting transformation and chaos,” Inf. Sci., vol. 547, pp. 307–327,
+Feb. 2021.
+[53] D.
+Clemente-López,
+J.
+M.
+Munoz-Pacheco,
+and
+J. D. J. Rangel-Magdaleno, “Experimental validation of IoT image
+encryption scheme based on a 5-D fractional hyperchaotic system
+and numba JIT compiler,” Internet Things, vol. 25, Apr. 2024,
+Art. no. 101116.
+[54] Q. Cun, X. Tong, Z. Wang, and M. Zhang, “Selective image encryption
+method based on dynamic DNA coding and new chaotic map,” Optik,
+vol. 243, Oct. 2021, Art. no. 167286.
+[55] M. Vijayakumar and A. Ahilan, “An optimized chaotic S-box for realtime image encryption scheme based on 4-dimensional memristive
+hyperchaotic map,” Ain Shams Eng. J., vol. 15, no. 4, Apr. 2024,
+Art. no. 102620.
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+6534
+
+IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, VOL. 35, NO. 7, JULY 2025
+
+Dawei Ding (Member, IEEE) received the B.S.
+and M.S. degrees from Anhui University, Hefei,
+China, in 1997 and 2004, respectively, and the
+Ph.D. degree from Shanghai Jiao Tong University,
+Shanghai, China, in 2008. From 2015 to 2016,
+he was a Visiting Scholar with Arizona State University. He is currently a Professor with the School of
+Electronic Information Engineering, Anhui University. His research interests include chaos, nonlinear
+circuit, memristor neural networks, image encryption, and secret communication.
+
+Zongli Yang received the Ph.D. degree from Anhui
+University, Hefei, China. He is currently a Lecturer
+with the School of Electronic Information Engineering, Anhui University. His research interests include
+chaos, nonlinear circuit, secret communication, and
+image processing.
+
+Dong Xie received the bachelor’s degree in communication engineering from Anhui University, Hefei,
+China, where he is currently pursuing the master’s
+degree with the School of Electronic Information
+Engineering. His research interests include chaotic
+map and image encryption.
+
+Hongwei Zhang received the Ph.D. degree from
+Shanghai Jiao Tong University, Shanghai, China,
+in 2006. From 2012 to 2013, he was a Visiting
+Scholar with the City University of Hong Kong.
+He is currently an Associate Professor with
+the School of Electronic Information Engineering, Anhui University, Hefei, China. His research
+interests include mobile communication theory and
+application, cloud computing, big data analysis, the
+Internet of Things, and image processing. He is a
+member of Chinese Association for Artificial Intelligence and a Senior Member of Anhui Communication Association.
+
+Chu’an Liu received the bachelor’s degree in communication engineering from Anhui University of
+Science and Technology, China, in 2024. He is currently pursuing the master’s degree with the School
+of Electronic Information Engineering, Anhui university, Hefei. His research interests include chaotic
+map and image encryption.
+
+Authorized licensed use limited to: Rajeev Gandhi Memorial College of Eng and Tech. Downloaded on July 18,2025 at 10:03:24 UTC from IEEE Xplore. Restrictions apply.
+
+

@@ -1,0 +1,66 @@
+{
+  "precision_degradation": {
+    "Double_64bit": {
+      "entropy": 7.903935764629953,
+      "mean": 0.5028382992284641,
+      "std": 0.28819718955590057,
+      "corr_with_double": 1.0
+    },
+    "Fixed_32bit_Q12.20": {
+      "entropy": 7.897573637020004,
+      "mean": 0.5080335450172424,
+      "std": 0.2892251792650993,
+      "corr_with_double": 0.01747786795073836
+    },
+    "Fixed_24bit_Q8.16": {
+      "entropy": 7.912852627723998,
+      "mean": 0.5040037460327148,
+      "std": 0.2916727836563892,
+      "corr_with_double": -0.04785251482581586
+    },
+    "Fixed_16bit_Q8.8": {
+      "entropy": 7.3596151916856,
+      "mean": 0.481119140625,
+      "std": 0.2952655483547946,
+      "corr_with_double": -0.02290121634964504
+    }
+  },
+  "operation_counts": {
+    "roi_dimensions": [
+      105,
+      105
+    ],
+    "total_pixels": 11025,
+    "cimba_multiplications": 121275,
+    "cimba_additions": 99225,
+    "cimba_divisions": 11025,
+    "cimba_cordic_evals": 22050,
+    "stp_multiplications": 3472875,
+    "stp_additions": 3439800,
+    "total_multiplications": 3594150,
+    "total_additions": 6059025,
+    "per_pixel_multiplications": 326.0,
+    "per_pixel_additions": 549.5714285714286
+  },
+  "fpga_feasibility": {
+    "target_fpga": "Xilinx Artix-7 XC7A100T",
+    "fpga_specs": {
+      "DSP48E1_slices": 240,
+      "Block_RAM_18Kb": 270,
+      "Logic_LUTs": 63400,
+      "Flip_Flops": 126800,
+      "Max_Clock_MHz": 200.0
+    },
+    "estimated_utilization": {
+      "DSP48E1_slices": 24,
+      "Block_RAM_18Kb": 18,
+      "Logic_LUTs": 14500,
+      "Flip_Flops": 18200,
+      "DSP_utilization_pct": 10.0,
+      "BRAM_utilization_pct": 6.666666666666667,
+      "LUT_utilization_pct": 22.87066246056782
+    },
+    "verdict": "GO",
+    "feasibility_note": "GO VERDICT: FPGA implementation is highly feasible on modern low-cost FPGAs (e.g. Artix-7, Zynq-7000). Estimated resource utilization is well within chip limits (< 25% of LUTs, 10% of DSPs, 7% of BRAMs). Key architectural requirements for HDL translation: (1) Replace floating-point exp(g) and trigonometric functions with a 16-stage CORDIC engine and Q8.16 scaling; (2) Implement cyclic shifting as circular pointer address arithmetic in dual-port BRAM instead of physical data movement; (3) Pipeline the STP block-diagonal matrix multiplier with 8 parallel DSP MAC units to sustain >= 60 FPS throughput at 100 MHz."
+  }
+}

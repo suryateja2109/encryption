@@ -1,0 +1,59 @@
+{
+  "multi_face": {
+    "faces_encrypted": 2,
+    "bit_exact_lossless": true,
+    "sub_keys": [
+      [
+        1.2345000000000006,
+        10.0,
+        0.4,
+        6.0,
+        10.0,
+        0.2731,
+        0.2,
+        0.3
+      ],
+      [
+        2.4689999999999994,
+        10.0,
+        0.4,
+        6.0,
+        10.0,
+        0.44620000000000004,
+        0.2,
+        0.3
+      ]
+    ]
+  },
+  "face_detectors": {
+    "opencv": {
+      "detection_rate_pct": 100.0,
+      "mean_latency_ms": 126.52132000002894
+    },
+    "mtcnn": {
+      "detection_rate_pct": 100.0,
+      "mean_latency_ms": 742.5539400001071
+    }
+  },
+  "extended_cryptanalysis": {
+    "local_shannon_entropy": {
+      "mean_local_entropy": 5.758581269629017,
+      "std_local_entropy": 0.07501157033523671,
+      "min_local_entropy": 5.601409765557392,
+      "max_local_entropy": 5.9375
+    },
+    "chi_square": {
+      "chi2_stat": 239.37327286470148,
+      "p_value": 0.7507799376713749,
+      "critical_value_005": 293.25,
+      "is_uniform": true
+    },
+    "avalanche_effect_sac_pct": 49.97467876039305,
+    "ml_attack": {
+      "accuracy": 0.5555555555555556,
+      "random_chance_baseline": 0.5,
+      "delta_from_chance": 0.05555555555555558,
+      "attack_resisted": true
+    }
+  }
+}
