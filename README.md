@@ -2,7 +2,7 @@
 ## Reproduction, Enhancement, and Hardware Feasibility of the Ding et al. Framework
 
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
-[![Tests](https://img.shields.io/badge/tests-27%2F27%20passing-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-30%2F30%20passing-brightgreen.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 [![Framework](https://img.shields.io/badge/IEEE%20TCSVT-July%202025-orange.svg)](https://ieeexplore.ieee.org/document/10892015)
 
@@ -117,7 +117,7 @@ pip install -r requirements.txt
 
 ## 🧪 Running Automated Tests
 
-Verify the entire pipeline using `pytest` (100% test pass rate across 27 suites):
+Verify the entire pipeline using `pytest` (100% test pass rate across 30 suites):
 
 ```bash
 pytest tests/ -v
