@@ -1,0 +1,66 @@
+[
+  {
+    "Algorithm": "Ref. [20]",
+    "Key space": "2^256",
+    "Entropy Red": 7.9993,
+    "Entropy Green": 7.9994,
+    "Entropy Blue": 7.9991,
+    "Entropy Average": 7.9992
+  },
+  {
+    "Algorithm": "Ref. [27]",
+    "Key space": "2^256",
+    "Entropy Red": "/",
+    "Entropy Green": "/",
+    "Entropy Blue": "/",
+    "Entropy Average": 7.9898
+  },
+  {
+    "Algorithm": "Ref. [46]",
+    "Key space": "2^425",
+    "Entropy Red": 7.9912,
+    "Entropy Green": 7.9913,
+    "Entropy Blue": 7.9914,
+    "Entropy Average": 7.9913
+  },
+  {
+    "Algorithm": "Ref. [47]",
+    "Key space": "2^512",
+    "Entropy Red": 7.9939,
+    "Entropy Green": 7.9939,
+    "Entropy Blue": 7.9939,
+    "Entropy Average": 7.9939
+  },
+  {
+    "Algorithm": "Ref. [48]",
+    "Key space": "2^512",
+    "Entropy Red": 7.9023,
+    "Entropy Green": 7.9029,
+    "Entropy Blue": 7.9023,
+    "Entropy Average": 7.9025
+  },
+  {
+    "Algorithm": "Ref. [49]",
+    "Key space": "2^399",
+    "Entropy Red": 7.9987,
+    "Entropy Green": 7.9985,
+    "Entropy Blue": 7.9984,
+    "Entropy Average": 7.9985
+  },
+  {
+    "Algorithm": "Ours (Base Paper)",
+    "Key space": "10^128 ~= 2^425.2",
+    "Entropy Red": 7.9968,
+    "Entropy Green": 7.997,
+    "Entropy Blue": 7.9968,
+    "Entropy Average": 7.9969
+  },
+  {
+    "Algorithm": "Ours (Empirical Test)",
+    "Key space": "10^128 ~= 2^425.2",
+    "Entropy Red": 7.9913,
+    "Entropy Green": 7.9914,
+    "Entropy Blue": 7.9915,
+    "Entropy Average": 7.9914
+  }
+]

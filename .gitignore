@@ -73,3 +73,6 @@ archive/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Scratch and temporary evaluation files
+scratch/

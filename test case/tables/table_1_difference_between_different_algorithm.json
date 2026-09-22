@@ -1,0 +1,37 @@
+[
+  {
+    "Algorithm": "Ref. [20]",
+    "ROI encryption": "\u2715",
+    "STP diffusion": "\u2715",
+    "Chaotic system": "2D",
+    "Key optimization": "\u2715"
+  },
+  {
+    "Algorithm": "Ref. [21]",
+    "ROI encryption": "\u2715",
+    "STP diffusion": "\u2715",
+    "Chaotic system": "1D",
+    "Key optimization": "\u2713"
+  },
+  {
+    "Algorithm": "Ref. [29]",
+    "ROI encryption": "\u2713",
+    "STP diffusion": "\u2715",
+    "Chaotic system": "2D",
+    "Key optimization": "\u2715"
+  },
+  {
+    "Algorithm": "Ref. [27]",
+    "ROI encryption": "\u2713",
+    "STP diffusion": "\u2713",
+    "Chaotic system": "2D",
+    "Key optimization": "\u2715"
+  },
+  {
+    "Algorithm": "Ours (Ding et al. / Batch 14)",
+    "ROI encryption": "\u2713",
+    "STP diffusion": "\u2713",
+    "Chaotic system": "3D-CIMBA",
+    "Key optimization": "\u2713 (APSO/PSO)"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "Image": "Face1",
+    "Horizontal Red (10^-3)": 19.6438,
+    "Horizontal Green (10^-3)": -0.1071,
+    "Horizontal Blue (10^-3)": -11.1454,
+    "Vertical Red (10^-3)": 29.1521,
+    "Vertical Green (10^-3)": 7.9827,
+    "Vertical Blue (10^-3)": -7.4385,
+    "Diagonal Red (10^-3)": -29.516,
+    "Diagonal Green (10^-3)": -0.5283,
+    "Diagonal Blue (10^-3)": -27.0058
+  },
+  {
+    "Image": "Face2",
+    "Horizontal Red (10^-3)": -15.9527,
+    "Horizontal Green (10^-3)": 2.3112,
+    "Horizontal Blue (10^-3)": -7.8017,
+    "Vertical Red (10^-3)": -12.0858,
+    "Vertical Green (10^-3)": 27.9248,
+    "Vertical Blue (10^-3)": -18.0172,
+    "Diagonal Red (10^-3)": -7.1667,
+    "Diagonal Green (10^-3)": -26.7012,
+    "Diagonal Blue (10^-3)": 5.1007
+  },
+  {
+    "Image": "Face3",
+    "Horizontal Red (10^-3)": -32.0341,
+    "Horizontal Green (10^-3)": -1.8557,
+    "Horizontal Blue (10^-3)": 26.4363,
+    "Vertical Red (10^-3)": -14.5527,
+    "Vertical Green (10^-3)": 6.3129,
+    "Vertical Blue (10^-3)": -14.0991,
+    "Diagonal Red (10^-3)": -19.9236,
+    "Diagonal Green (10^-3)": -11.9749,
+    "Diagonal Blue (10^-3)": -1.2947
+  },
+  {
+    "Image": "Face4",
+    "Horizontal Red (10^-3)": -27.7101,
+    "Horizontal Green (10^-3)": -13.4253,
+    "Horizontal Blue (10^-3)": 0.5091,
+    "Vertical Red (10^-3)": 0.7596,
+    "Vertical Green (10^-3)": -10.8038,
+    "Vertical Blue (10^-3)": 4.2448,
+    "Diagonal Red (10^-3)": -9.4049,
+    "Diagonal Green (10^-3)": 37.5492,
+    "Diagonal Blue (10^-3)": -12.5627
+  },
+  {
+    "Image": "baboon",
+    "Horizontal Red (10^-3)": -20.1011,
+    "Horizontal Green (10^-3)": -20.7591,
+    "Horizontal Blue (10^-3)": -14.56,
+    "Vertical Red (10^-3)": 29.5739,
+    "Vertical Green (10^-3)": 3.5163,
+    "Vertical Blue (10^-3)": 14.4113,
+    "Diagonal Red (10^-3)": -10.1706,
+    "Diagonal Green (10^-3)": -39.3654,
+    "Diagonal Blue (10^-3)": 25.0281
+  },
+  {
+    "Image": "Peppers",
+    "Horizontal Red (10^-3)": 15.2409,
+    "Horizontal Green (10^-3)": -5.5164,
+    "Horizontal Blue (10^-3)": 11.677,
+    "Vertical Red (10^-3)": -21.8199,
+    "Vertical Green (10^-3)": -0.0727,
+    "Vertical Blue (10^-3)": -20.142,
+    "Diagonal Red (10^-3)": -6.8283,
+    "Diagonal Green (10^-3)": -5.0967,
+    "Diagonal Blue (10^-3)": 17.2536
+  },
+  {
+    "Image": "4.1.01",
+    "Horizontal Red (10^-3)": -2.6874,
+    "Horizontal Green (10^-3)": -12.8149,
+    "Horizontal Blue (10^-3)": -14.5235,
+    "Vertical Red (10^-3)": -18.7149,
+    "Vertical Green (10^-3)": 0.9434,
+    "Vertical Blue (10^-3)": -31.1451,
+    "Diagonal Red (10^-3)": -8.3774,
+    "Diagonal Green (10^-3)": -1.8576,
+    "Diagonal Blue (10^-3)": 3.5988
+  },
+  {
+    "Image": "4.1.04",
+    "Horizontal Red (10^-3)": 37.2594,
+    "Horizontal Green (10^-3)": -36.4919,
+    "Horizontal Blue (10^-3)": -9.8453,
+    "Vertical Red (10^-3)": 12.4535,
+    "Vertical Green (10^-3)": -19.1687,
+    "Vertical Blue (10^-3)": -21.6782,
+    "Diagonal Red (10^-3)": 21.2348,
+    "Diagonal Green (10^-3)": -24.3267,
+    "Diagonal Blue (10^-3)": 29.0962
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "Sub-tests": "Frequency (Monobit)",
+    "Ref. [54] P-val": 0.972,
+    "Ref. [54] Prop": "99/100",
+    "Ref. [55] P-val": 0.543,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.679,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Frequency (Block)",
+    "Ref. [54] P-val": 0.798,
+    "Ref. [54] Prop": "98/100",
+    "Ref. [55] P-val": 0.058,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.225,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Runs",
+    "Ref. [54] P-val": 0.699,
+    "Ref. [54] Prop": "97/100",
+    "Ref. [55] P-val": 0.543,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.514,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Longest Run",
+    "Ref. [54] P-val": 0.534,
+    "Ref. [54] Prop": "98/100",
+    "Ref. [55] P-val": 0.134,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.091,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Binary Matrix Rank",
+    "Ref. [54] P-val": 0.202,
+    "Ref. [54] Prop": "99/100",
+    "Ref. [55] P-val": 0.993,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.081,
+    "Ours Proportion": "98/100"
+  },
+  {
+    "Sub-tests": "FFT (Spectral)",
+    "Ref. [54] P-val": 0.401,
+    "Ref. [54] Prop": "98/100",
+    "Ref. [55] P-val": 0.036,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.419,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Non-Overlapping Template",
+    "Ref. [54] P-val": 0.998,
+    "Ref. [54] Prop": "100/100",
+    "Ref. [55] P-val": 0.749,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.898,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Overlapping Template",
+    "Ref. [54] P-val": 0.304,
+    "Ref. [54] Prop": "98/100",
+    "Ref. [55] P-val": 0.362,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.72,
+    "Ours Proportion": "98/100"
+  },
+  {
+    "Sub-tests": "Maurer Universal Statistic",
+    "Ref. [54] P-val": 0.74,
+    "Ref. [54] Prop": "100/100",
+    "Ref. [55] P-val": "/",
+    "Ref. [55] Prop": "/",
+    "Ours P-value": 0.534,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Linear Complexity",
+    "Ref. [54] P-val": 0.514,
+    "Ref. [54] Prop": "99/100",
+    "Ref. [55] P-val": 0.748,
+    "Ref. [55] Prop": "9/10",
+    "Ours P-value": 0.798,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Serial (1)",
+    "Ref. [54] P-val": 0.76,
+    "Ref. [54] Prop": "100/100",
+    "Ref. [55] P-val": 0.029,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.494,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Serial (2)",
+    "Ref. [54] P-val": "/",
+    "Ref. [54] Prop": "/",
+    "Ref. [55] P-val": 0.535,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.779,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Approximate Entropy",
+    "Ref. [54] P-val": 0.911,
+    "Ref. [54] Prop": "99/100",
+    "Ref. [55] P-val": 0.524,
+    "Ref. [55] Prop": "9/10",
+    "Ours P-value": 0.401,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Cumulative Sums (Forward)",
+    "Ref. [54] P-val": 0.964,
+    "Ref. [54] Prop": "98/100",
+    "Ref. [55] P-val": 0.542,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.091,
+    "Ours Proportion": "98/100"
+  },
+  {
+    "Sub-tests": "Cumulative Sums (Reverse)",
+    "Ref. [54] P-val": "/",
+    "Ref. [54] Prop": "/",
+    "Ref. [55] P-val": 0.542,
+    "Ref. [55] Prop": "10/10",
+    "Ours P-value": 0.978,
+    "Ours Proportion": "99/100"
+  },
+  {
+    "Sub-tests": "Random Excursions",
+    "Ref. [54] P-val": "/",
+    "Ref. [54] Prop": "/",
+    "Ref. [55] P-val": "/",
+    "Ref. [55] Prop": "/",
+    "Ours P-value": 0.812,
+    "Ours Proportion": "100/100"
+  },
+  {
+    "Sub-tests": "Random Excursions Variant",
+    "Ref. [54] P-val": "/",
+    "Ref. [54] Prop": "/",
+    "Ref. [55] P-val": "/",
+    "Ref. [55] Prop": "/",
+    "Ours P-value": 0.745,
+    "Ours Proportion": "100/100"
+  }
+]

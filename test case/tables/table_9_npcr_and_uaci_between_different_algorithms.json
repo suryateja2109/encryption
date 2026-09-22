@@ -1,0 +1,42 @@
+[
+  {
+    "Algorithm": "Ref. [20]",
+    "NPCR (%)": 99.6075,
+    "UACI (%)": 33.4615
+  },
+  {
+    "Algorithm": "Ref. [27]",
+    "NPCR (%)": 99.6083,
+    "UACI (%)": 33.4657
+  },
+  {
+    "Algorithm": "Ref. [46]",
+    "NPCR (%)": 99.6183,
+    "UACI (%)": 33.4783
+  },
+  {
+    "Algorithm": "Ref. [47]",
+    "NPCR (%)": 99.61,
+    "UACI (%)": 33.4629
+  },
+  {
+    "Algorithm": "Ref. [48]",
+    "NPCR (%)": 99.6101,
+    "UACI (%)": 33.4751
+  },
+  {
+    "Algorithm": "Ref. [49]",
+    "NPCR (%)": 99.6101,
+    "UACI (%)": 33.8414
+  },
+  {
+    "Algorithm": "Ours (Base Paper)",
+    "NPCR (%)": 99.6105,
+    "UACI (%)": 33.4615
+  },
+  {
+    "Algorithm": "Ours (Empirical Test)",
+    "NPCR (%)": 99.6154,
+    "UACI (%)": 33.4549
+  }
+]

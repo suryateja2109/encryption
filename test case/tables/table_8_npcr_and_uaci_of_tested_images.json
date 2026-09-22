@@ -1,0 +1,82 @@
+[
+  {
+    "Image": "Face1",
+    "NPCR Red (%)": 99.5646,
+    "NPCR Green (%)": 99.6644,
+    "NPCR Blue (%)": 99.6644,
+    "UACI Red (%)": 33.2672,
+    "UACI Green (%)": 33.5719,
+    "UACI Blue (%)": 33.5965,
+    "Result": "Pass"
+  },
+  {
+    "Image": "Face2",
+    "NPCR Red (%)": 99.6544,
+    "NPCR Green (%)": 99.584,
+    "NPCR Blue (%)": 99.648,
+    "UACI Red (%)": 33.5847,
+    "UACI Green (%)": 33.3666,
+    "UACI Blue (%)": 33.4561,
+    "Result": "Pass"
+  },
+  {
+    "Image": "Face3",
+    "NPCR Red (%)": 99.5628,
+    "NPCR Green (%)": 99.5971,
+    "NPCR Blue (%)": 99.6742,
+    "UACI Red (%)": 33.2383,
+    "UACI Green (%)": 33.2852,
+    "UACI Blue (%)": 33.2557,
+    "Result": "Pass"
+  },
+  {
+    "Image": "Face4",
+    "NPCR Red (%)": 99.5537,
+    "NPCR Green (%)": 99.6612,
+    "NPCR Blue (%)": 99.6116,
+    "UACI Red (%)": 33.4787,
+    "UACI Green (%)": 33.3283,
+    "UACI Blue (%)": 33.5739,
+    "Result": "Pass"
+  },
+  {
+    "Image": "baboon",
+    "NPCR Red (%)": 99.6124,
+    "NPCR Green (%)": 99.6029,
+    "NPCR Blue (%)": 99.5956,
+    "UACI Red (%)": 33.5067,
+    "UACI Green (%)": 33.4522,
+    "UACI Blue (%)": 33.4631,
+    "Result": "Pass"
+  },
+  {
+    "Image": "Peppers",
+    "NPCR Red (%)": 99.6296,
+    "NPCR Green (%)": 99.6262,
+    "NPCR Blue (%)": 99.6017,
+    "UACI Red (%)": 33.5461,
+    "UACI Green (%)": 33.4526,
+    "UACI Blue (%)": 33.4071,
+    "Result": "Pass"
+  },
+  {
+    "Image": "4.1.01",
+    "NPCR Red (%)": 99.6094,
+    "NPCR Green (%)": 99.614,
+    "NPCR Blue (%)": 99.6277,
+    "UACI Red (%)": 33.5481,
+    "UACI Green (%)": 33.459,
+    "UACI Blue (%)": 33.5141,
+    "Result": "Pass"
+  },
+  {
+    "Image": "4.1.04",
+    "NPCR Red (%)": 99.6231,
+    "NPCR Green (%)": 99.6017,
+    "NPCR Blue (%)": 99.585,
+    "UACI Red (%)": 33.6983,
+    "UACI Green (%)": 33.3912,
+    "UACI Blue (%)": 33.4754,
+    "Result": "Pass"
+  }
+]

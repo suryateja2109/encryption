@@ -1,0 +1,50 @@
+[
+  {
+    "Algorithm": "Ref. [20]",
+    "Horizontal (10^-3)": 0.849,
+    "Vertical (10^-3)": 0.68,
+    "Diagonal (10^-3)": 0.276
+  },
+  {
+    "Algorithm": "Ref. [27]",
+    "Horizontal (10^-3)": -0.1022,
+    "Vertical (10^-3)": 0.3399,
+    "Diagonal (10^-3)": 0.2489
+  },
+  {
+    "Algorithm": "Ref. [46]",
+    "Horizontal (10^-3)": 1.253,
+    "Vertical (10^-3)": 0.0896,
+    "Diagonal (10^-3)": 0.0074
+  },
+  {
+    "Algorithm": "Ref. [47]",
+    "Horizontal (10^-3)": -4.9,
+    "Vertical (10^-3)": 6.7,
+    "Diagonal (10^-3)": 0.6
+  },
+  {
+    "Algorithm": "Ref. [48]",
+    "Horizontal (10^-3)": -1.5,
+    "Vertical (10^-3)": 2.3,
+    "Diagonal (10^-3)": 2.1
+  },
+  {
+    "Algorithm": "Ref. [49]",
+    "Horizontal (10^-3)": 3.65,
+    "Vertical (10^-3)": 0.8233,
+    "Diagonal (10^-3)": 3.36
+  },
+  {
+    "Algorithm": "Ours (Ding et al. 2025)",
+    "Horizontal (10^-3)": -0.3514,
+    "Vertical (10^-3)": -0.5548,
+    "Diagonal (10^-3)": 0.9452
+  },
+  {
+    "Algorithm": "Ours (Empirical Test)",
+    "Horizontal (10^-3)": -5.5939,
+    "Vertical (10^-3)": -3.0193,
+    "Diagonal (10^-3)": -4.3017
+  }
+]

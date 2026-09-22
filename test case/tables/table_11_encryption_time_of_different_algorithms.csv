@@ -1,0 +1,8 @@
+Algorithm,Time (s),CC (10^9)
+Ref. [20],1.3053,2.8717
+Ref. [27],/,/
+Ref. [46],1.8632,4.2854
+Ref. [47],1.4310,4.1499
+Ref. [49],/,/
+Ours (Base Paper),0.6629,2.5853
+Ours (Empirical Test),0.9038,3.1632

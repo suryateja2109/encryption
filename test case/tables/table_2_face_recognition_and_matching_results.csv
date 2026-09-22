@@ -1,0 +1,6 @@
+Image,Target Identity,Matched Image,Euclidean Distance,Threshold,Result
+image 1,Aaron_Eckhart,Aaron_Eckhart,0.0,0.5,Match
+image 2,Abdullah_Gul,Abdullah_Gul,0.0,0.5,Match
+image 3,Al_Pacino,Al_Pacino,0.0,0.5,Match
+image 4,Alan_Greenspan,Alan_Greenspan,0.0,0.5,Match
+image 5,Not In Database,None,1.2597,0.5,None

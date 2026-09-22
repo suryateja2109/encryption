@@ -1,0 +1,98 @@
+[
+  {
+    "Image": "Face1",
+    "Image size": "105x105",
+    "Original Red": 7.6835,
+    "Original Green": 7.3735,
+    "Original Blue": 7.2758,
+    "Original Mean": 7.4442,
+    "Encrypted Red": 7.9834,
+    "Encrypted Green": 7.9811,
+    "Encrypted Blue": 7.9829,
+    "Encrypted Mean": 7.9825
+  },
+  {
+    "Image": "Face2",
+    "Image size": "125x125",
+    "Original Red": 7.7254,
+    "Original Green": 7.6162,
+    "Original Blue": 7.4596,
+    "Original Mean": 7.6004,
+    "Encrypted Red": 7.9883,
+    "Encrypted Green": 7.9885,
+    "Encrypted Blue": 7.9884,
+    "Encrypted Mean": 7.9884
+  },
+  {
+    "Image": "Face3",
+    "Image size": "108x108",
+    "Original Red": 7.6283,
+    "Original Green": 7.4481,
+    "Original Blue": 7.1372,
+    "Original Mean": 7.4045,
+    "Encrypted Red": 7.9821,
+    "Encrypted Green": 7.9841,
+    "Encrypted Blue": 7.9841,
+    "Encrypted Mean": 7.9834
+  },
+  {
+    "Image": "Face4",
+    "Image size": "110x110",
+    "Original Red": 7.8043,
+    "Original Green": 7.5782,
+    "Original Blue": 7.4439,
+    "Original Mean": 7.6088,
+    "Encrypted Red": 7.9833,
+    "Encrypted Green": 7.9841,
+    "Encrypted Blue": 7.9841,
+    "Encrypted Mean": 7.9839
+  },
+  {
+    "Image": "baboon",
+    "Image size": "512x512",
+    "Original Red": 7.1406,
+    "Original Green": 6.8768,
+    "Original Blue": 7.3905,
+    "Original Mean": 7.136,
+    "Encrypted Red": 7.9992,
+    "Encrypted Green": 7.9993,
+    "Encrypted Blue": 7.9994,
+    "Encrypted Mean": 7.9993
+  },
+  {
+    "Image": "Peppers",
+    "Image size": "512x512",
+    "Original Red": 7.4243,
+    "Original Green": 7.4219,
+    "Original Blue": 7.1222,
+    "Original Mean": 7.3228,
+    "Encrypted Red": 7.9993,
+    "Encrypted Green": 7.9994,
+    "Encrypted Blue": 7.9993,
+    "Encrypted Mean": 7.9993
+  },
+  {
+    "Image": "4.1.01",
+    "Image size": "256x256",
+    "Original Red": 5.544,
+    "Original Green": 5.5498,
+    "Original Blue": 5.5402,
+    "Original Mean": 5.5447,
+    "Encrypted Red": 7.9974,
+    "Encrypted Green": 7.9973,
+    "Encrypted Blue": 7.997,
+    "Encrypted Mean": 7.9972
+  },
+  {
+    "Image": "4.1.04",
+    "Image size": "256x256",
+    "Original Red": 5.5501,
+    "Original Green": 5.5485,
+    "Original Blue": 5.5454,
+    "Original Mean": 5.548,
+    "Encrypted Red": 7.9975,
+    "Encrypted Green": 7.9972,
+    "Encrypted Blue": 7.9971,
+    "Encrypted Mean": 7.9973
+  }
+]

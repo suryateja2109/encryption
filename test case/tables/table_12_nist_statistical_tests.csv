@@ -1,0 +1,18 @@
+Sub-tests,Ref. [54] P-val,Ref. [54] Prop,Ref. [55] P-val,Ref. [55] Prop,Ours P-value,Ours Proportion
+Frequency (Monobit),0.972,99/100,0.543,10/10,0.679,100/100
+Frequency (Block),0.798,98/100,0.058,10/10,0.225,99/100
+Runs,0.699,97/100,0.543,10/10,0.514,100/100
+Longest Run,0.534,98/100,0.134,10/10,0.091,99/100
+Binary Matrix Rank,0.202,99/100,0.993,10/10,0.081,98/100
+FFT (Spectral),0.401,98/100,0.036,10/10,0.419,100/100
+Non-Overlapping Template,0.998,100/100,0.749,10/10,0.898,100/100
+Overlapping Template,0.304,98/100,0.362,10/10,0.72,98/100
+Maurer Universal Statistic,0.74,100/100,/,/,0.534,99/100
+Linear Complexity,0.514,99/100,0.748,9/10,0.798,99/100
+Serial (1),0.76,100/100,0.029,10/10,0.494,99/100
+Serial (2),/,/,0.535,10/10,0.779,100/100
+Approximate Entropy,0.911,99/100,0.524,9/10,0.401,99/100
+Cumulative Sums (Forward),0.964,98/100,0.542,10/10,0.091,98/100
+Cumulative Sums (Reverse),/,/,0.542,10/10,0.978,99/100
+Random Excursions,/,/,/,/,0.812,100/100
+Random Excursions Variant,/,/,/,/,0.745,100/100

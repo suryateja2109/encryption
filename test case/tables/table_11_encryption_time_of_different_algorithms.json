@@ -1,0 +1,37 @@
+[
+  {
+    "Algorithm": "Ref. [20]",
+    "Time (s)": "1.3053",
+    "CC (10^9)": "2.8717"
+  },
+  {
+    "Algorithm": "Ref. [27]",
+    "Time (s)": "/",
+    "CC (10^9)": "/"
+  },
+  {
+    "Algorithm": "Ref. [46]",
+    "Time (s)": "1.8632",
+    "CC (10^9)": "4.2854"
+  },
+  {
+    "Algorithm": "Ref. [47]",
+    "Time (s)": "1.4310",
+    "CC (10^9)": "4.1499"
+  },
+  {
+    "Algorithm": "Ref. [49]",
+    "Time (s)": "/",
+    "CC (10^9)": "/"
+  },
+  {
+    "Algorithm": "Ours (Base Paper)",
+    "Time (s)": "0.6629",
+    "CC (10^9)": "2.5853"
+  },
+  {
+    "Algorithm": "Ours (Empirical Test)",
+    "Time (s)": "0.9038",
+    "CC (10^9)": "3.1632"
+  }
+]
