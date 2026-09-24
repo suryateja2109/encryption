@@ -1,6 +1,6 @@
-Image,Target Identity,Matched Image,Euclidean Distance,Threshold,Result
-image 1,Aaron_Eckhart,Aaron_Eckhart,0.0,0.5,Match
-image 2,Abdullah_Gul,Abdullah_Gul,0.0,0.5,Match
-image 3,Al_Pacino,Al_Pacino,0.0,0.5,Match
-image 4,Alan_Greenspan,Alan_Greenspan,0.0,0.5,Match
-image 5,Not In Database,None,1.2597,0.5,None
+Probe Image,Target Identity,Matched Identity,Euclidean Distance,Decision Threshold,Verification Verdict
+Image 1 (Aaron Eckhart),Aaron Eckhart,Aaron Eckhart,0.0000,0.5000,Match 
+Image 2 (Abdullah Gul),Abdullah Gul,Abdullah Gul,0.0000,0.5000,Match 
+Image 3 (Al Pacino),Al Pacino,Al Pacino,0.0000,0.5000,Match 
+Image 4 (Alan Greenspan),Alan Greenspan,Alan Greenspan,0.0000,0.5000,Match 
+Image 5 (Arnold Schwarzenegger),Not In Database,None,1.2597,0.5000,No Match (Rejected)

@@ -1,42 +1,66 @@
 [
   {
-    "Algorithm": "Ref. [20]",
-    "NPCR (%)": 99.6075,
-    "UACI (%)": 33.4615
+    "Image": "Face 1 (Aaron Eckhart)",
+    "NPCR Mean (%)": "99.6674%",
+    "UACI Mean (%)": "33.6193%",
+    "Strict Avalanche (SAC)": "50.0586%",
+    "SAC Deviation (|50 - SAC|)": "0.0586%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ref. [27]",
-    "NPCR (%)": 99.6083,
-    "UACI (%)": 33.4657
+    "Image": "Face 2 (Abdullah Gul)",
+    "NPCR Mean (%)": "99.6139%",
+    "UACI Mean (%)": "33.5111%",
+    "Strict Avalanche (SAC)": "49.9611%",
+    "SAC Deviation (|50 - SAC|)": "0.0389%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ref. [46]",
-    "NPCR (%)": 99.6183,
-    "UACI (%)": 33.4783
+    "Image": "Face 3 (Al Pacino)",
+    "NPCR Mean (%)": "99.5885%",
+    "UACI Mean (%)": "33.5605%",
+    "Strict Avalanche (SAC)": "50.0875%",
+    "SAC Deviation (|50 - SAC|)": "0.0875%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ref. [47]",
-    "NPCR (%)": 99.61,
-    "UACI (%)": 33.4629
+    "Image": "Face 4 (Alan Greenspan)",
+    "NPCR Mean (%)": "99.6474%",
+    "UACI Mean (%)": "33.6792%",
+    "Strict Avalanche (SAC)": "50.0771%",
+    "SAC Deviation (|50 - SAC|)": "0.0771%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ref. [48]",
-    "NPCR (%)": 99.6101,
-    "UACI (%)": 33.4751
+    "Image": "Face 5 (Colin Powell)",
+    "NPCR Mean (%)": "99.6381%",
+    "UACI Mean (%)": "33.5686%",
+    "Strict Avalanche (SAC)": "50.0421%",
+    "SAC Deviation (|50 - SAC|)": "0.0421%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ref. [49]",
-    "NPCR (%)": 99.6101,
-    "UACI (%)": 33.8414
+    "Image": "Face 6 (George W Bush)",
+    "NPCR Mean (%)": "99.6371%",
+    "UACI Mean (%)": "33.5860%",
+    "Strict Avalanche (SAC)": "49.9032%",
+    "SAC Deviation (|50 - SAC|)": "0.0968%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ours (Base Paper)",
-    "NPCR (%)": 99.6105,
-    "UACI (%)": 33.4615
+    "Image": "Face 7 (Tony Blair)",
+    "NPCR Mean (%)": "99.5949%",
+    "UACI Mean (%)": "33.4441%",
+    "Strict Avalanche (SAC)": "50.1684%",
+    "SAC Deviation (|50 - SAC|)": "0.1684%",
+    "Status": "PASS \u2705"
   },
   {
-    "Algorithm": "Ours (Empirical Test)",
-    "NPCR (%)": 99.6154,
-    "UACI (%)": 33.4549
+    "Image": "Face 8 (David Beckham)",
+    "NPCR Mean (%)": "99.6039%",
+    "UACI Mean (%)": "33.4100%",
+    "Strict Avalanche (SAC)": "50.0176%",
+    "SAC Deviation (|50 - SAC|)": "0.0176%",
+    "Status": "PASS \u2705"
   }
 ]

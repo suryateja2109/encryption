@@ -1,8 +1,9 @@
-Algorithm,Time (s),CC (10^9)
-Ref. [20],1.3053,2.8717
-Ref. [27],/,/
-Ref. [46],1.8632,4.2854
-Ref. [47],1.4310,4.1499
-Ref. [49],/,/
-Ours (Base Paper),0.6629,2.5853
-Ours (Empirical Test),0.9038,3.1632
+Image,Selective Time (s),Selective CC (10^9),Global Time (s),Global CC (10^9)
+Face 1 (Aaron Eckhart),0.1326,0.4642,0.9734,3.4070
+Face 2 (Abdullah Gul),0.2872,1.0052,1.0434,3.6520
+Face 3 (Al Pacino),0.0698,0.2442,1.1692,4.0924
+Face 4 (Alan Greenspan),0.1533,0.5364,0.9111,3.1887
+Face 5 (Colin Powell),0.1753,0.6136,1.0016,3.5057
+Face 6 (George W Bush),0.0631,0.2209,1.0506,3.6772
+Face 7 (Tony Blair),0.3580,1.2529,1.1076,3.8766
+Face 8 (David Beckham),0.2570,0.8994,0.9509,3.3281

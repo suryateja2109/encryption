@@ -1,9 +1,9 @@
-Algorithm,NPCR (%),UACI (%)
-Ref. [20],99.6075,33.4615
-Ref. [27],99.6083,33.4657
-Ref. [46],99.6183,33.4783
-Ref. [47],99.61,33.4629
-Ref. [48],99.6101,33.4751
-Ref. [49],99.6101,33.8414
-Ours (Base Paper),99.6105,33.4615
-Ours (Empirical Test),99.6154,33.4549
+Image,NPCR Mean (%),UACI Mean (%),Strict Avalanche (SAC),SAC Deviation (|50 - SAC|),Status
+Face 1 (Aaron Eckhart),99.6674%,33.6193%,50.0586%,0.0586%,PASS 
+Face 2 (Abdullah Gul),99.6139%,33.5111%,49.9611%,0.0389%,PASS 
+Face 3 (Al Pacino),99.5885%,33.5605%,50.0875%,0.0875%,PASS 
+Face 4 (Alan Greenspan),99.6474%,33.6792%,50.0771%,0.0771%,PASS 
+Face 5 (Colin Powell),99.6381%,33.5686%,50.0421%,0.0421%,PASS 
+Face 6 (George W Bush),99.6371%,33.5860%,49.9032%,0.0968%,PASS 
+Face 7 (Tony Blair),99.5949%,33.4441%,50.1684%,0.1684%,PASS 
+Face 8 (David Beckham),99.6039%,33.4100%,50.0176%,0.0176%,PASS

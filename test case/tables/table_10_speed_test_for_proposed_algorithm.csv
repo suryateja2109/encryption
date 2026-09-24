@@ -1,9 +1,9 @@
-Image,Size,Face size,Global (s),Face only (s)
-Face1,250x250,105x105,0.9038,0.1129
-Face2,250x250,125x125,0.9449,0.2729
-Face3,250x250,108x108,0.9086,0.1574
-Face4,250x250,110x110,0.8664,0.1656
-baboon,512x512,/,4.1059,/
-Peppers,512x512,/,3.9038,/
-4.1.01,256x256,/,1.0482,/
-4.1.04,256x256,/,0.9463,/
+Image,Total Image Size,Facial ROI Size,Global Encryption (s),Selective Face ROI (s),Time Saved (%)
+Face 1 (Aaron Eckhart),250x250,105x105,0.9734,0.1326,86.4%
+Face 2 (Abdullah Gul),250x250,125x125,1.0434,0.2872,72.5%
+Face 3 (Al Pacino),250x250,108x108,1.1692,0.0698,94.0%
+Face 4 (Alan Greenspan),250x250,110x110,0.9111,0.1533,83.2%
+Face 5 (Colin Powell),250x250,109x109,1.0016,0.1753,82.5%
+Face 6 (George W Bush),250x250,108x108,1.0506,0.0631,94.0%
+Face 7 (Tony Blair),250x250,127x127,1.1076,0.3580,67.7%
+Face 8 (David Beckham),250x250,121x121,0.9509,0.2570,73.0%

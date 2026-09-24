@@ -1,37 +1,37 @@
 [
   {
-    "Algorithm": "Ref. [20]",
+    "Algorithm": "Traditional Chaos Cipher",
     "ROI encryption": "\u2715",
     "STP diffusion": "\u2715",
-    "Chaotic system": "2D",
+    "Chaotic system": "1D Logistic Map",
     "Key optimization": "\u2715"
   },
   {
-    "Algorithm": "Ref. [21]",
-    "ROI encryption": "\u2715",
+    "Algorithm": "Selective Chaos (No STP)",
+    "ROI encryption": "\u2714",
     "STP diffusion": "\u2715",
-    "Chaotic system": "1D",
-    "Key optimization": "\u2713"
+    "Chaotic system": "2D Sine-Tent Map",
+    "Key optimization": "\u2715"
   },
   {
-    "Algorithm": "Ref. [29]",
-    "ROI encryption": "\u2713",
+    "Algorithm": "Proposed Without APSO",
+    "ROI encryption": "\u2714",
+    "STP diffusion": "\u2714",
+    "Chaotic system": "3D-CIMBA Continuous",
+    "Key optimization": "\u2715"
+  },
+  {
+    "Algorithm": "Proposed Without STP",
+    "ROI encryption": "\u2714",
     "STP diffusion": "\u2715",
-    "Chaotic system": "2D",
-    "Key optimization": "\u2715"
+    "Chaotic system": "3D-CIMBA Continuous",
+    "Key optimization": "\u2714"
   },
   {
-    "Algorithm": "Ref. [27]",
-    "ROI encryption": "\u2713",
-    "STP diffusion": "\u2713",
-    "Chaotic system": "2D",
-    "Key optimization": "\u2715"
-  },
-  {
-    "Algorithm": "Ours (Ding et al. / Batch 14)",
-    "ROI encryption": "\u2713",
-    "STP diffusion": "\u2713",
-    "Chaotic system": "3D-CIMBA",
-    "Key optimization": "\u2713 (APSO/PSO)"
+    "Algorithm": "Full Proposed Pipeline (Ours)",
+    "ROI encryption": "\u2714",
+    "STP diffusion": "\u2714",
+    "Chaotic system": "3D-CIMBA Hyperchaotic",
+    "Key optimization": "\u2714 (APSO)"
   }
 ]

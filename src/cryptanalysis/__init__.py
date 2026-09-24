@@ -29,6 +29,7 @@ from .randomness import (
     evaluate_key_sensitivity,
     benchmark_encryption_speed,
     run_nist_statistical_tests,
+    compute_live_randomness_tests,
 )
 from .extended_analysis import (
     compute_local_shannon_entropy,
@@ -56,6 +57,7 @@ __all__ = [
     "evaluate_key_sensitivity",
     "benchmark_encryption_speed",
     "run_nist_statistical_tests",
+    "compute_live_randomness_tests",
     "compute_local_shannon_entropy",
     "compute_chi_square_uniformity",
     "measure_avalanche_effect",

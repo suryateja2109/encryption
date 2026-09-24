@@ -1,155 +1,58 @@
 [
   {
-    "Sub-tests": "Frequency (Monobit)",
-    "Ref. [54] P-val": 0.972,
-    "Ref. [54] Prop": "99/100",
-    "Ref. [55] P-val": 0.543,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.679,
-    "Ours Proportion": "100/100"
+    "NIST Statistical Sub-test": "Frequency (Monobit) Test",
+    "Test Statistic": "s_obs = 0.1897",
+    "Calculated p-value": "0.8495",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Frequency (Block)",
-    "Ref. [54] P-val": 0.798,
-    "Ref. [54] Prop": "98/100",
-    "Ref. [55] P-val": 0.058,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.225,
-    "Ours Proportion": "99/100"
+    "NIST Statistical Sub-test": "Frequency Within Block Test",
+    "Test Statistic": "\u03c7\u00b2 = 176.47",
+    "Calculated p-value": "0.8253",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Runs",
-    "Ref. [54] P-val": 0.699,
-    "Ref. [54] Prop": "97/100",
-    "Ref. [55] P-val": 0.543,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.514,
-    "Ours Proportion": "100/100"
+    "NIST Statistical Sub-test": "Runs Test",
+    "Test Statistic": "V_obs = 12514",
+    "Calculated p-value": "0.8593",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Longest Run",
-    "Ref. [54] P-val": 0.534,
-    "Ref. [54] Prop": "98/100",
-    "Ref. [55] P-val": 0.134,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.091,
-    "Ours Proportion": "99/100"
+    "NIST Statistical Sub-test": "Longest Run of Ones Test",
+    "Test Statistic": "\u03c7\u00b2 = 106.17",
+    "Calculated p-value": "0.2577",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Binary Matrix Rank",
-    "Ref. [54] P-val": 0.202,
-    "Ref. [54] Prop": "99/100",
-    "Ref. [55] P-val": 0.993,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.081,
-    "Ours Proportion": "98/100"
+    "NIST Statistical Sub-test": "Discrete Fourier Transform (Spectral)",
+    "Test Statistic": "d = -0.3482",
+    "Calculated p-value": "0.7277",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "FFT (Spectral)",
-    "Ref. [54] P-val": 0.401,
-    "Ref. [54] Prop": "98/100",
-    "Ref. [55] P-val": 0.036,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.419,
-    "Ours Proportion": "100/100"
+    "NIST Statistical Sub-test": "Cumulative Sums (Forward) Test",
+    "Test Statistic": "z = 101",
+    "Calculated p-value": "0.1908",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Non-Overlapping Template",
-    "Ref. [54] P-val": 0.998,
-    "Ref. [54] Prop": "100/100",
-    "Ref. [55] P-val": 0.749,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.898,
-    "Ours Proportion": "100/100"
+    "NIST Statistical Sub-test": "Cumulative Sums (Reverse) Test",
+    "Test Statistic": "z = 82",
+    "Calculated p-value": "0.0492",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   },
   {
-    "Sub-tests": "Overlapping Template",
-    "Ref. [54] P-val": 0.304,
-    "Ref. [54] Prop": "98/100",
-    "Ref. [55] P-val": 0.362,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.72,
-    "Ours Proportion": "98/100"
-  },
-  {
-    "Sub-tests": "Maurer Universal Statistic",
-    "Ref. [54] P-val": 0.74,
-    "Ref. [54] Prop": "100/100",
-    "Ref. [55] P-val": "/",
-    "Ref. [55] Prop": "/",
-    "Ours P-value": 0.534,
-    "Ours Proportion": "99/100"
-  },
-  {
-    "Sub-tests": "Linear Complexity",
-    "Ref. [54] P-val": 0.514,
-    "Ref. [54] Prop": "99/100",
-    "Ref. [55] P-val": 0.748,
-    "Ref. [55] Prop": "9/10",
-    "Ours P-value": 0.798,
-    "Ours Proportion": "99/100"
-  },
-  {
-    "Sub-tests": "Serial (1)",
-    "Ref. [54] P-val": 0.76,
-    "Ref. [54] Prop": "100/100",
-    "Ref. [55] P-val": 0.029,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.494,
-    "Ours Proportion": "99/100"
-  },
-  {
-    "Sub-tests": "Serial (2)",
-    "Ref. [54] P-val": "/",
-    "Ref. [54] Prop": "/",
-    "Ref. [55] P-val": 0.535,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.779,
-    "Ours Proportion": "100/100"
-  },
-  {
-    "Sub-tests": "Approximate Entropy",
-    "Ref. [54] P-val": 0.911,
-    "Ref. [54] Prop": "99/100",
-    "Ref. [55] P-val": 0.524,
-    "Ref. [55] Prop": "9/10",
-    "Ours P-value": 0.401,
-    "Ours Proportion": "99/100"
-  },
-  {
-    "Sub-tests": "Cumulative Sums (Forward)",
-    "Ref. [54] P-val": 0.964,
-    "Ref. [54] Prop": "98/100",
-    "Ref. [55] P-val": 0.542,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.091,
-    "Ours Proportion": "98/100"
-  },
-  {
-    "Sub-tests": "Cumulative Sums (Reverse)",
-    "Ref. [54] P-val": "/",
-    "Ref. [54] Prop": "/",
-    "Ref. [55] P-val": 0.542,
-    "Ref. [55] Prop": "10/10",
-    "Ours P-value": 0.978,
-    "Ours Proportion": "99/100"
-  },
-  {
-    "Sub-tests": "Random Excursions",
-    "Ref. [54] P-val": "/",
-    "Ref. [54] Prop": "/",
-    "Ref. [55] P-val": "/",
-    "Ref. [55] Prop": "/",
-    "Ours P-value": 0.812,
-    "Ours Proportion": "100/100"
-  },
-  {
-    "Sub-tests": "Random Excursions Variant",
-    "Ref. [54] P-val": "/",
-    "Ref. [54] Prop": "/",
-    "Ref. [55] P-val": "/",
-    "Ref. [55] Prop": "/",
-    "Ours P-value": 0.745,
-    "Ours Proportion": "100/100"
+    "NIST Statistical Sub-test": "Serial Test (2-bit Transitions)",
+    "Test Statistic": "\u03c7\u00b2 = 0.10",
+    "Calculated p-value": "0.9917",
+    "Significance Level (\u03b1)": "0.01",
+    "Empirical Result": "PASS \u2705"
   }
 ]

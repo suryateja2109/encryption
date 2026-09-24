@@ -1,50 +1,65 @@
 [
   {
-    "Algorithm": "Ref. [20]",
-    "Horizontal (10^-3)": 0.849,
-    "Vertical (10^-3)": 0.68,
-    "Diagonal (10^-3)": 0.276
+    "Tested Image": "Face 1 (Aaron Eckhart)",
+    "Horizontal Mean (10^-3)": "+10.7194",
+    "Vertical Mean (10^-3)": "-20.7427",
+    "Diagonal Mean (10^-3)": "+9.5150",
+    "Overall Absolute Mean": "13.6590"
   },
   {
-    "Algorithm": "Ref. [27]",
-    "Horizontal (10^-3)": -0.1022,
-    "Vertical (10^-3)": 0.3399,
-    "Diagonal (10^-3)": 0.2489
+    "Tested Image": "Face 2 (Abdullah Gul)",
+    "Horizontal Mean (10^-3)": "-8.2987",
+    "Vertical Mean (10^-3)": "-18.7926",
+    "Diagonal Mean (10^-3)": "-18.2404",
+    "Overall Absolute Mean": "15.1106"
   },
   {
-    "Algorithm": "Ref. [46]",
-    "Horizontal (10^-3)": 1.253,
-    "Vertical (10^-3)": 0.0896,
-    "Diagonal (10^-3)": 0.0074
+    "Tested Image": "Face 3 (Al Pacino)",
+    "Horizontal Mean (10^-3)": "-0.6775",
+    "Vertical Mean (10^-3)": "+12.8353",
+    "Diagonal Mean (10^-3)": "-13.1679",
+    "Overall Absolute Mean": "8.8936"
   },
   {
-    "Algorithm": "Ref. [47]",
-    "Horizontal (10^-3)": -4.9,
-    "Vertical (10^-3)": 6.7,
-    "Diagonal (10^-3)": 0.6
+    "Tested Image": "Face 4 (Alan Greenspan)",
+    "Horizontal Mean (10^-3)": "+3.8966",
+    "Vertical Mean (10^-3)": "-19.8728",
+    "Diagonal Mean (10^-3)": "+6.8073",
+    "Overall Absolute Mean": "10.1923"
   },
   {
-    "Algorithm": "Ref. [48]",
-    "Horizontal (10^-3)": -1.5,
-    "Vertical (10^-3)": 2.3,
-    "Diagonal (10^-3)": 2.1
+    "Tested Image": "Face 5 (Colin Powell)",
+    "Horizontal Mean (10^-3)": "+1.1148",
+    "Vertical Mean (10^-3)": "+2.7995",
+    "Diagonal Mean (10^-3)": "+17.8151",
+    "Overall Absolute Mean": "7.2431"
   },
   {
-    "Algorithm": "Ref. [49]",
-    "Horizontal (10^-3)": 3.65,
-    "Vertical (10^-3)": 0.8233,
-    "Diagonal (10^-3)": 3.36
+    "Tested Image": "Face 6 (George W Bush)",
+    "Horizontal Mean (10^-3)": "+3.9075",
+    "Vertical Mean (10^-3)": "-0.6866",
+    "Diagonal Mean (10^-3)": "-11.1082",
+    "Overall Absolute Mean": "5.2341"
   },
   {
-    "Algorithm": "Ours (Ding et al. 2025)",
-    "Horizontal (10^-3)": -0.3514,
-    "Vertical (10^-3)": -0.5548,
-    "Diagonal (10^-3)": 0.9452
+    "Tested Image": "Face 7 (Tony Blair)",
+    "Horizontal Mean (10^-3)": "+4.9538",
+    "Vertical Mean (10^-3)": "-10.1147",
+    "Diagonal Mean (10^-3)": "-5.1545",
+    "Overall Absolute Mean": "6.7410"
   },
   {
-    "Algorithm": "Ours (Empirical Test)",
-    "Horizontal (10^-3)": -5.5939,
-    "Vertical (10^-3)": -3.0193,
-    "Diagonal (10^-3)": -4.3017
+    "Tested Image": "Face 8 (David Beckham)",
+    "Horizontal Mean (10^-3)": "+16.1374",
+    "Vertical Mean (10^-3)": "-4.7109",
+    "Diagonal Mean (10^-3)": "-18.6408",
+    "Overall Absolute Mean": "13.1630"
+  },
+  {
+    "Tested Image": "Average Across All 8 Images",
+    "Horizontal Mean (10^-3)": "+3.9692",
+    "Vertical Mean (10^-3)": "-7.4107",
+    "Diagonal Mean (10^-3)": "-4.0218",
+    "Overall Absolute Mean": "5.1339"
   }
 ]

@@ -1,6 +1,6 @@
 Algorithm,ROI encryption,STP diffusion,Chaotic system,Key optimization
-Ref. [20],✕,✕,2D,✕
-Ref. [21],✕,✕,1D,✓
-Ref. [29],✓,✕,2D,✕
-Ref. [27],✓,✓,2D,✕
-Ours (Ding et al. / Batch 14),✓,✓,3D-CIMBA,✓ (APSO/PSO)
+Traditional Chaos Cipher,✕,✕,1D Logistic Map,✕
+Selective Chaos (No STP),✔,✕,2D Sine-Tent Map,✕
+Proposed Without APSO,✔,✔,3D-CIMBA Continuous,✕
+Proposed Without STP,✔,✕,3D-CIMBA Continuous,✔
+Full Proposed Pipeline (Ours),✔,✔,3D-CIMBA Hyperchaotic,✔ (APSO)

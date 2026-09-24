@@ -1,9 +1,10 @@
-Algorithm,Horizontal (10^-3),Vertical (10^-3),Diagonal (10^-3)
-Ref. [20],0.849,0.68,0.276
-Ref. [27],-0.1022,0.3399,0.2489
-Ref. [46],1.253,0.0896,0.0074
-Ref. [47],-4.9,6.7,0.6
-Ref. [48],-1.5,2.3,2.1
-Ref. [49],3.65,0.8233,3.36
-Ours (Ding et al. 2025),-0.3514,-0.5548,0.9452
-Ours (Empirical Test),-5.5939,-3.0193,-4.3017
+Tested Image,Horizontal Mean (10^-3),Vertical Mean (10^-3),Diagonal Mean (10^-3),Overall Absolute Mean
+Face 1 (Aaron Eckhart),+10.7194,-20.7427,+9.5150,13.6590
+Face 2 (Abdullah Gul),-8.2987,-18.7926,-18.2404,15.1106
+Face 3 (Al Pacino),-0.6775,+12.8353,-13.1679,8.8936
+Face 4 (Alan Greenspan),+3.8966,-19.8728,+6.8073,10.1923
+Face 5 (Colin Powell),+1.1148,+2.7995,+17.8151,7.2431
+Face 6 (George W Bush),+3.9075,-0.6866,-11.1082,5.2341
+Face 7 (Tony Blair),+4.9538,-10.1147,-5.1545,6.7410
+Face 8 (David Beckham),+16.1374,-4.7109,-18.6408,13.1630
+Average Across All 8 Images,+3.9692,-7.4107,-4.0218,5.1339

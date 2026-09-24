@@ -1,50 +1,66 @@
 [
   {
-    "Size": "120x120",
-    "NPCR- (%)": 99.56,
-    "UACI- (%)": 33.2399,
-    "UACI+ (%)": 33.6862,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 1 (105x105)",
+    "NPCR Critical Bound (> %)": "> 99.5530%",
+    "UACI Lower Bound (%)": "33.2080%",
+    "UACI Upper Bound (%)": "33.7180%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   },
   {
-    "Size": "125x125",
-    "NPCR- (%)": 99.562,
-    "UACI- (%)": 33.2488,
-    "UACI+ (%)": 33.6772,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 2 (125x125)",
+    "NPCR Critical Bound (> %)": "> 99.5620%",
+    "UACI Lower Bound (%)": "33.2488%",
+    "UACI Upper Bound (%)": "33.6772%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   },
   {
-    "Size": "133x133",
-    "NPCR- (%)": 99.5648,
-    "UACI- (%)": 33.2617,
-    "UACI+ (%)": 33.6644,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 3 (108x108)",
+    "NPCR Critical Bound (> %)": "> 99.5545%",
+    "UACI Lower Bound (%)": "33.2151%",
+    "UACI Upper Bound (%)": "33.7110%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   },
   {
-    "Size": "140x140",
-    "NPCR- (%)": 99.5671,
-    "UACI- (%)": 33.2718,
-    "UACI+ (%)": 33.6543,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 4 (110x110)",
+    "NPCR Critical Bound (> %)": "> 99.5555%",
+    "UACI Lower Bound (%)": "33.2196%",
+    "UACI Upper Bound (%)": "33.7065%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   },
   {
-    "Size": "256x256",
-    "NPCR- (%)": 99.5862,
-    "UACI- (%)": 33.3584,
-    "UACI+ (%)": 33.5676,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 5 (109x109)",
+    "NPCR Critical Bound (> %)": "> 99.5550%",
+    "UACI Lower Bound (%)": "33.2174%",
+    "UACI Upper Bound (%)": "33.7087%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   },
   {
-    "Size": "512x512",
-    "NPCR- (%)": 99.5978,
-    "UACI- (%)": 33.4107,
-    "UACI+ (%)": 33.5153,
-    "Ideal NPCR (%)": 99.6094,
-    "Ideal UACI (%)": 33.463
+    "Image / Dimension": "Face 6 (108x108)",
+    "NPCR Critical Bound (> %)": "> 99.5545%",
+    "UACI Lower Bound (%)": "33.2151%",
+    "UACI Upper Bound (%)": "33.7110%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
+  },
+  {
+    "Image / Dimension": "Face 7 (127x127)",
+    "NPCR Critical Bound (> %)": "> 99.5627%",
+    "UACI Lower Bound (%)": "33.2522%",
+    "UACI Upper Bound (%)": "33.6739%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
+  },
+  {
+    "Image / Dimension": "Face 8 (121x121)",
+    "NPCR Critical Bound (> %)": "> 99.5604%",
+    "UACI Lower Bound (%)": "33.2417%",
+    "UACI Upper Bound (%)": "33.6843%",
+    "Ideal NPCR (%)": "99.6094%",
+    "Ideal UACI (%)": "33.4635%"
   }
 ]

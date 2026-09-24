@@ -1,37 +1,58 @@
 [
   {
-    "Algorithm": "Ref. [20]",
-    "Time (s)": "1.3053",
-    "CC (10^9)": "2.8717"
+    "Image": "Face 1 (Aaron Eckhart)",
+    "Selective Time (s)": "0.1326",
+    "Selective CC (10^9)": "0.4642",
+    "Global Time (s)": "0.9734",
+    "Global CC (10^9)": "3.4070"
   },
   {
-    "Algorithm": "Ref. [27]",
-    "Time (s)": "/",
-    "CC (10^9)": "/"
+    "Image": "Face 2 (Abdullah Gul)",
+    "Selective Time (s)": "0.2872",
+    "Selective CC (10^9)": "1.0052",
+    "Global Time (s)": "1.0434",
+    "Global CC (10^9)": "3.6520"
   },
   {
-    "Algorithm": "Ref. [46]",
-    "Time (s)": "1.8632",
-    "CC (10^9)": "4.2854"
+    "Image": "Face 3 (Al Pacino)",
+    "Selective Time (s)": "0.0698",
+    "Selective CC (10^9)": "0.2442",
+    "Global Time (s)": "1.1692",
+    "Global CC (10^9)": "4.0924"
   },
   {
-    "Algorithm": "Ref. [47]",
-    "Time (s)": "1.4310",
-    "CC (10^9)": "4.1499"
+    "Image": "Face 4 (Alan Greenspan)",
+    "Selective Time (s)": "0.1533",
+    "Selective CC (10^9)": "0.5364",
+    "Global Time (s)": "0.9111",
+    "Global CC (10^9)": "3.1887"
   },
   {
-    "Algorithm": "Ref. [49]",
-    "Time (s)": "/",
-    "CC (10^9)": "/"
+    "Image": "Face 5 (Colin Powell)",
+    "Selective Time (s)": "0.1753",
+    "Selective CC (10^9)": "0.6136",
+    "Global Time (s)": "1.0016",
+    "Global CC (10^9)": "3.5057"
   },
   {
-    "Algorithm": "Ours (Base Paper)",
-    "Time (s)": "0.6629",
-    "CC (10^9)": "2.5853"
+    "Image": "Face 6 (George W Bush)",
+    "Selective Time (s)": "0.0631",
+    "Selective CC (10^9)": "0.2209",
+    "Global Time (s)": "1.0506",
+    "Global CC (10^9)": "3.6772"
   },
   {
-    "Algorithm": "Ours (Empirical Test)",
-    "Time (s)": "0.9038",
-    "CC (10^9)": "3.1632"
+    "Image": "Face 7 (Tony Blair)",
+    "Selective Time (s)": "0.3580",
+    "Selective CC (10^9)": "1.2529",
+    "Global Time (s)": "1.1076",
+    "Global CC (10^9)": "3.8766"
+  },
+  {
+    "Image": "Face 8 (David Beckham)",
+    "Selective Time (s)": "0.2570",
+    "Selective CC (10^9)": "0.8994",
+    "Global Time (s)": "0.9509",
+    "Global CC (10^9)": "3.3281"
   }
 ]

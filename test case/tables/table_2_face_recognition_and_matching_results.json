@@ -1,42 +1,42 @@
 [
   {
-    "Image": "image 1",
-    "Target Identity": "Aaron_Eckhart",
-    "Matched Image": "Aaron_Eckhart",
-    "Euclidean Distance": 0.0,
-    "Threshold": 0.5,
-    "Result": "Match"
+    "Probe Image": "Image 1 (Aaron Eckhart)",
+    "Target Identity": "Aaron Eckhart",
+    "Matched Identity": "Aaron Eckhart",
+    "Euclidean Distance": "0.0000",
+    "Decision Threshold": "0.5000",
+    "Verification Verdict": "Match \u2705"
   },
   {
-    "Image": "image 2",
-    "Target Identity": "Abdullah_Gul",
-    "Matched Image": "Abdullah_Gul",
-    "Euclidean Distance": 0.0,
-    "Threshold": 0.5,
-    "Result": "Match"
+    "Probe Image": "Image 2 (Abdullah Gul)",
+    "Target Identity": "Abdullah Gul",
+    "Matched Identity": "Abdullah Gul",
+    "Euclidean Distance": "0.0000",
+    "Decision Threshold": "0.5000",
+    "Verification Verdict": "Match \u2705"
   },
   {
-    "Image": "image 3",
-    "Target Identity": "Al_Pacino",
-    "Matched Image": "Al_Pacino",
-    "Euclidean Distance": 0.0,
-    "Threshold": 0.5,
-    "Result": "Match"
+    "Probe Image": "Image 3 (Al Pacino)",
+    "Target Identity": "Al Pacino",
+    "Matched Identity": "Al Pacino",
+    "Euclidean Distance": "0.0000",
+    "Decision Threshold": "0.5000",
+    "Verification Verdict": "Match \u2705"
   },
   {
-    "Image": "image 4",
-    "Target Identity": "Alan_Greenspan",
-    "Matched Image": "Alan_Greenspan",
-    "Euclidean Distance": 0.0,
-    "Threshold": 0.5,
-    "Result": "Match"
+    "Probe Image": "Image 4 (Alan Greenspan)",
+    "Target Identity": "Alan Greenspan",
+    "Matched Identity": "Alan Greenspan",
+    "Euclidean Distance": "0.0000",
+    "Decision Threshold": "0.5000",
+    "Verification Verdict": "Match \u2705"
   },
   {
-    "Image": "image 5",
+    "Probe Image": "Image 5 (Arnold Schwarzenegger)",
     "Target Identity": "Not In Database",
-    "Matched Image": "None",
-    "Euclidean Distance": 1.2597,
-    "Threshold": 0.5,
-    "Result": "None"
+    "Matched Identity": "None",
+    "Euclidean Distance": "1.2597",
+    "Decision Threshold": "0.5000",
+    "Verification Verdict": "No Match (Rejected) \u2705"
   }
 ]
