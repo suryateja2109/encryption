@@ -1,12 +1,38 @@
 """
-Face detection and ROI extraction using DeepFace with multi-backend support.
+Face detection and ROI extraction using DeepFace with native OpenCV Haar fallback.
 Reference: Ding et al., IEEE TCSVT 2025, Section II-A & Section IV-B.
 """
 
 from typing import Tuple, List, Dict, Any, Optional
 import cv2
 import numpy as np
-from deepface import DeepFace
+
+try:
+    from deepface import DeepFace
+    DEEPFACE_AVAILABLE = True
+except (ImportError, Exception):
+    DEEPFACE_AVAILABLE = False
+
+
+def _detect_with_opencv_haar(image: np.ndarray) -> List[Dict[str, Any]]:
+    """Native OpenCV Haar Cascade detector (fast, lightweight, zero TensorFlow dependency)."""
+    gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+    cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    face_cascade = cv2.CascadeClassifier(cascade_path)
+    faces = face_cascade.detectMultiScale(
+        gray,
+        scaleFactor=1.1,
+        minNeighbors=5,
+        minSize=(30, 30),
+        flags=cv2.CASCADE_SCALE_IMAGE,
+    )
+    results = []
+    for (x, y, w, h) in faces:
+        results.append({
+            "facial_area": {"x": int(x), "y": int(y), "w": int(w), "h": int(h)},
+            "confidence": 0.95,
+        })
+    return results
 
 
 def detect_face_roi(
@@ -24,19 +50,30 @@ def detect_face_roi(
 
     Returns:
         (roi, (x, y, w, h)):
-            - roi: (h, w, 3) cropped uint8 array, or None if detection failed
+            - roi: (h, w, 3) cropped uint8 array, or fallback central region
             - bbox: (x, y, w, h) coordinates
     """
     H, W, C = image.shape
-    try:
-        faces = DeepFace.extract_faces(
-            img_path=image,
-            detector_backend=backend,
-            enforce_detection=enforce_detection,
-            align=True,
-        )
-    except Exception:
-        faces = []
+    faces = []
+
+    # Try DeepFace if requested and available
+    if DEEPFACE_AVAILABLE and backend in ["mtcnn", "retinaface"]:
+        try:
+            faces = DeepFace.extract_faces(
+                img_path=image,
+                detector_backend=backend,
+                enforce_detection=enforce_detection,
+                align=True,
+            )
+        except Exception:
+            faces = []
+
+    # If backend is opencv or deepface failed/unavailable, use native OpenCV Haar Cascades
+    if not faces:
+        try:
+            faces = _detect_with_opencv_haar(image)
+        except Exception:
+            faces = []
 
     if not faces:
         # Fallback: central region (50% of image dimensions)
@@ -72,15 +109,24 @@ def detect_multiple_faces(
         List of dictionaries with keys: 'roi', 'bbox': (x, y, w, h), 'confidence'.
     """
     H, W, _ = image.shape
-    try:
-        faces = DeepFace.extract_faces(
-            img_path=image,
-            detector_backend=backend,
-            enforce_detection=False,
-            align=False,
-        )
-    except Exception:
-        faces = []
+    faces = []
+
+    if DEEPFACE_AVAILABLE and backend in ["mtcnn", "retinaface"]:
+        try:
+            faces = DeepFace.extract_faces(
+                img_path=image,
+                detector_backend=backend,
+                enforce_detection=False,
+                align=False,
+            )
+        except Exception:
+            faces = []
+
+    if not faces:
+        try:
+            faces = _detect_with_opencv_haar(image)
+        except Exception:
+            faces = []
 
     results = []
     for f in faces:
