@@ -5,7 +5,12 @@ Reference: Ding et al., IEEE TCSVT 2025, Section IV-B, Table II.
 
 from typing import Tuple, List, Optional
 import numpy as np
-from deepface import DeepFace
+
+try:
+    from deepface import DeepFace
+    DEEPFACE_AVAILABLE = True
+except (ImportError, Exception):
+    DEEPFACE_AVAILABLE = False
 
 
 def extract_face_embedding(
@@ -24,6 +29,9 @@ def extract_face_embedding(
     Returns:
         1D normalized numpy array embedding vector (e.g. 128-d or 512-d), or None if failed.
     """
+    if not DEEPFACE_AVAILABLE:
+        return None
+
     try:
         results = DeepFace.represent(
             img_path=face_img,
